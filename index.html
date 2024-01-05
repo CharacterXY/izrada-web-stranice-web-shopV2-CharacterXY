@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css" class="" />
     <link rel="stylesheet" href="styles/styles.css" class="" />
     <link
       rel="stylesheet"
@@ -10,14 +11,53 @@
     />
   </head>
   <body>
-    <header>
-      <iframe
-        src="/partials/header.html"
-        width="100%"
-        class="auto-height-iframe"
-      ></iframe>
-    </header>
+    <header class="header">
+      <div class="first-row">
+        <div class="icons">
+          <ul>
+            <li><i class="fa-solid fa-heart"></i>Favoriti</li>
+            <li><i class="fa-solid fa-user"></i>Prijava</li>
+          </ul>
+        </div>
 
+        <form action="" method="GET">
+          <div class="search">
+            <input
+              type="text"
+              placeholder=" Search Something ..."
+              name="search"
+            />
+            <button type="submit">
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="icons-shopping">
+          <ul class="shopping-list">
+            <li>
+              <!--     <span class="quantity-number">0</span> -->
+              <i class="fa-solid fa-cart-shopping"></i>
+              <p class="icon3">Košarica</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="logo-container">
+          <img src="../images/logo15.png" alt="Logo" class="logo-img" />
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#" class="">Oprema</a></li>
+            <li><a href="#" class="">Bicikli</a></li>
+            <li><a href="#" class="">Novo</a></li>
+            <li><a href="#" class="">Akcija</a></li>
+            <li><a href="#" class="">Dijelovi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <div class="cover">
         <img

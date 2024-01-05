@@ -6,221 +6,19 @@
   margin: 0;
   padding: 0;
 }
-body {
-  overflow-x: hidden;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  background-color: rgb(199, 202, 199);
-  position: relative;
-}
-
-form {
-  align-self: center;
-  justify-content: center;
-  display: flex;
-  flex: 1;
-  order: 1;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  padding-top: 0.4rem;
-  height: 2.5rem;
-  width: 100%;
-  justify-content: center;
-  align-self: start;
-}
-
-.search button {
-  border: none;
-  cursor: pointer;
-}
-
-.search i {
-  margin-left: -3rem;
-  color: #636161;
-  font-size: 0.8rem;
-}
-
-.search input[type="text"] {
-  border: none;
-  outline: none;
-  width: 80%;
-  height: 100%;
-  border-radius: 5px;
-  font-family: "Kodchasan", sans-serif;
-  padding-left: 1rem;
-  box-shadow: 5px 2px 18px 1px #4e6945;
-  font-size: 15px;
-}
-
-.icons {
-  display: flex;
-  order: 1;
-  flex: 1;
-  justify-content: center;
-  margin-right: 3rem;
-  padding-top: 0.6rem;
-}
-
-.icons-shopping {
-  display: flex;
-  flex: 1;
-  order: 3;
-  justify-content: center;
-  align-self: center;
-  padding-top: 0.6rem;
-}
-
-.icons-shopping li i {
-  font-size: 20px;
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out;
-}
-
-.first-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 80; /* Adjust the height as needed */
-  background-color: rgb(199, 202, 199);
-}
-
-.second-row {
-  display: flex;
-  align-items: center;
-  background-color: rgb(199, 202, 199);
-  height: 100px;
-}
-
-.logo-container {
-  width: 200px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  margin-right: 20px; /* Add margin to create space */
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Align the nav to the right */
-  flex: 2;
-}
-
-.nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 5px; /* Adjust as needed */
-}
-
-.nav ul li {
-  color: rgb(206, 233, 87);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: "Libre Baskerville", serif;
-  text-transform: uppercase;
-  padding: 1rem;
-}
-
-ul li a {
-  text-decoration: none;
-  padding-right: 2rem;
-  font-size: 16px;
-  color: #4a4e47;
-  transition: transform 0.5s ease-in-out;
-  cursor: pointer;
-  padding-left: 0.7rem;
-  margin-bottom: 0.2rem;
-  position: relative;
-}
-
-ul li a:hover {
-  color: rgb(167, 112, 17);
-}
 
 /* ODE KORISTIM PSEUDO KLASU BEFORE DA BI POZICIONIRA BROJ ODABRANIH ARTIKALA POVISE DESNO BROJ */
-
-.quantity-number {
-  left: 82.1%;
-  top: 19%;
-  position: absolute;
-  background-color: rgb(241, 106, 106);
-  border-radius: 50%;
-  width: 17px;
-  height: 10px;
-  text-align: center;
-  color: wheat;
-  font-size: 10px;
-  font-weight: 500;
-  padding-bottom: 10px;
-}
-
-.icons {
-  justify-content: stretch;
-  padding-left: 3rem;
-}
-
-.icons-shopping {
-  justify-content: flex-end;
-  padding-right: 1.5rem;
-}
-.icons-shopping i {
-  padding-left: 12px;
-}
-
-.icons ul {
-  display: flex;
-}
-
-.icons li i {
-  padding-right: 2rem;
-  font-size: 18px;
-  color: #4a4e47;
-  transition: transform 0.5s ease-in-out;
-  cursor: pointer;
-  padding-left: 0.7rem;
-  margin-bottom: 0.2rem;
-  position: relative;
-}
-
-.icons li i:hover {
-  transform: translateX(0.6rem);
-  color: rgb(235, 120, 26);
-}
-
-ul li {
-  display: flex;
-  flex-direction: column;
-  padding-right: 2rem;
-  color: rgb(97, 99, 88);
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  font-family: "Libre Baskerville", serif;
-  text-transform: uppercase;
-}
 
 .cover {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 .cover img {
-  height: 78vh;
+  height: 80vh;
   object-fit: cover;
   background-position: center;
   display: flex;
@@ -267,7 +65,7 @@ ul li {
 }
 
 .heading-primary-sub {
-  display: block;
+  display: inline-block;
   font-size: 30px;
   font-weight: 200;
   letter-spacing: 14.4px;
@@ -302,10 +100,4 @@ ul li {
 .btn-white {
   background-color: #739b73;
   color: rgb(255, 255, 255);
-}
-
-.auto-height-frame {
-  border: none;
-  width: 100%;
-  margin: 0;
 }

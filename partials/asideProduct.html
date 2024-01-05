@@ -1,0 +1,340 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&display=swap");
+
+    .sidebar {
+      width: 400px;
+      height: 100wh;
+
+      padding: 10px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: stretch;
+      padding-left: 25px;
+      background-color: rgb(164, 213, 255);
+    }
+
+    .form-group {
+      padding: 0.7rem;
+    }
+
+    h2 {
+      font-family: "Rajdhani", sans-serif;
+      font-weight: 600;
+    }
+
+    h3 {
+      padding-left: 20px;
+
+      font-family: "Rajdhani", sans-serif;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .price-box {
+      padding: 2px;
+      font-family: "Prompt", sans-serif;
+    }
+
+    .price-box input[type="radio"] {
+      margin-bottom: 20px;
+    }
+
+    .price-box p {
+      letter-spacing: 1px;
+    }
+
+    .form-group label {
+      font-family: "Prompt", sans-serif;
+      font-size: 16px;
+    }
+
+    /* -----------------------------------------------*/
+
+    /* Product Card Styles */
+    .product-card {
+      width: 300px;
+      margin: 20px;
+      background-color: #fff;
+      overflow: hidden;
+      padding-top: 5rem;
+      transition: transform 0.3s ease-in-out;
+      font-family: "Prompt", sans-serif;
+      line-height: 1.2rem;
+      height: auto;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      border: 1px solid #b6b5b5;
+      box-shadow: 0 0 10px rgba(78, 78, 78, 0.8);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      color: #007bff;
+      font-size: 1.1rem;
+      margin-top: 5px;
+    }
+
+    .product-description {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .bottom-card {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 15px;
+    }
+
+    .bottom-card i {
+      padding-top: 7px;
+    }
+
+    .bottom-card i:hover {
+      color: orangered;
+    }
+
+    .button {
+      outline: none;
+      background-color: #2c312f;
+      border: none;
+      height: 30px;
+      width: 130px;
+      padding: 6px;
+      color: #ffffff;
+      transition: all 0.2s ease-in-out;
+      border-radius: 2px;
+    }
+
+    .button:hover {
+      background-color: #476459;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 7rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .product-card {
+        width: 92%;
+      }
+    }
+  </style>
+  <body>
+    <!-- SIDEBAR -->
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3>Home / <strong>Bicikli</strong></h3>
+        <div class="filters">
+          <h2>Filters</h2>
+        </div>
+        <form action="" method="GET">
+          <h3>Brends :</h3>
+          <hr />
+          <div class="form-group">
+            <input type="checkbox" id="brand1" name="brand1" value="Trek" />
+            <label for="brand1">Trek</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand2" name="brand2" value="Giant" />
+            <label for="brand2">Gaint</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="Norco" />
+            <label for="brand2">Norco</label>
+          </div>
+          <h3>Price:</h3>
+          <hr />
+          <div class="price-box">
+            <p>Please select your price:</p>
+            <input type="radio" id="price1" name="price" value="100" />
+            <label for="price1">0 - 100 € </label><br />
+            <input type="radio" id="price2" name="price" value="500" />
+            <label for="price2">0 - 500 €</label><br />
+            <input type="radio" id="price3" name="price" value="1000" />
+            <label for="price3">0 - 1000 €</label><br />
+            <input
+              type="range"
+              id="price"
+              name="price"
+              min="100"
+              max="5000"
+              value="0"
+              step="10"
+            /><label for="price"> Price</label>
+            <p>(0-5000)</p>
+            <p>Value: <output id="value"></output></p>
+          </div>
+        </form>
+      </aside>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../images/LAPIERRE_BIKE.jpg" alt="Product Image" />
+        </div>
+        <div class="product-info">
+          <div class="product-titile">
+            TREK Fuel EXe 9.7 2023 Matte Pennyflake
+          </div>
+          <div class="product-price">€190.99</div>
+          <div class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+            in quam totam repudiandae nam eveniet et dolor temporibus officiis
+            aspernatur?
+          </div>
+          <div class="bottom-card">
+            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--DRUGI PRODUCT DODAN HTML-->
+
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="../images/fuel-ex-9-7-gen-6-2023-crimson-35843-16710499036144-o.webp"
+            alt="Product Image"
+          />
+        </div>
+        <div class="product-info">
+          <div class="product-titile">
+            TREK Fuel EXe 9.7 2023 Matte Pennyflake
+          </div>
+          <div class="product-price">€190.99</div>
+          <div class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+            in quam totam repudiandae nam eveniet et dolor temporibus officiis
+            aspernatur?
+          </div>
+          <div class="bottom-card">
+            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--TRECI PRODUCT DODAN HTML-->
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
+            alt="Product Image"
+          />
+        </div>
+        <div class="product-info">
+          <div class="product-titile">
+            TREK Fuel EXe 9.7 2023 Matte Pennyflake
+          </div>
+          <div class="product-price">€190.99</div>
+          <div class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+            in quam totam repudiandae nam eveniet et dolor temporibus officiis
+            aspernatur?
+          </div>
+          <div class="bottom-card">
+            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
+            alt="Product Image"
+          />
+        </div>
+        <div class="product-info">
+          <div class="product-titile">
+            TREK Fuel EXe 9.7 2023 Matte Pennyflake
+          </div>
+          <div class="product-price">€190.99</div>
+          <div class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+            in quam totam repudiandae nam eveniet et dolor temporibus officiis
+            aspernatur?
+          </div>
+          <div class="bottom-card">
+            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
+            alt="Product Image"
+          />
+        </div>
+        <div class="product-info">
+          <div class="product-titile">
+            TREK Fuel EXe 9.7 2023 Matte Pennyflake
+          </div>
+          <div class="product-price">€190.99</div>
+          <div class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+            in quam totam repudiandae nam eveniet et dolor temporibus officiis
+            aspernatur?
+          </div>
+          <div class="bottom-card">
+            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const value = document.querySelector("#value");
+      const input = document.querySelector("#price");
+      value.textContent = input.value;
+      input.addEventListener("input", (event) => {
+        value.textContent = event.target.value;
+      });
+    </script>
+  </body>
+</html>
