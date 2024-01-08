@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("header.css");
+@import url("footer.css");
 
 *,
 *::after,
@@ -7,23 +9,22 @@
   padding: 0;
 }
 
-/* ODE KORISTIM PSEUDO KLASU BEFORE DA BI POZICIONIRA BROJ ODABRANIH ARTIKALA POVISE DESNO BROJ */
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
 
 .cover {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
 }
 
 .cover img {
   height: 80vh;
   object-fit: cover;
   background-position: center;
-  display: flex;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .cover::before {
@@ -72,20 +73,15 @@
   font-family: "Rajdhani", sans-serif;
 }
 
-.cover {
-  position: absolute;
-  color: #d8dfd5;
-}
-
 .btn:link,
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 13px 20px;
   transition: all 0.2s;
   bottom: 20px;
+  font-size: 14px;
 }
 
 .btn:hover {
@@ -100,4 +96,31 @@
 .btn-white {
   background-color: #739b73;
   color: rgb(255, 255, 255);
+}
+
+.newsletter-page {
+  background-color: rgb(224, 220, 220);
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-image {
+  display: flex;
+  width: 700px;
+  height: 500px;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.newsletter-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 2rem;
 }

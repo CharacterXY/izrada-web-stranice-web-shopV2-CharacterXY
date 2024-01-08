@@ -7,14 +7,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&display=swap");
 
     .sidebar {
       width: 400px;
-      height: 100wh;
-
+      min-height: 100%;
       padding: 10px;
     }
 
@@ -22,7 +22,6 @@
       display: flex;
       justify-content: stretch;
       padding-left: 25px;
-      background-color: rgb(164, 213, 255);
     }
 
     .form-group {
@@ -36,7 +35,6 @@
 
     h3 {
       padding-left: 20px;
-
       font-family: "Rajdhani", sans-serif;
       letter-spacing: 1px;
       font-weight: 300;
@@ -72,13 +70,14 @@
       transition: transform 0.3s ease-in-out;
       font-family: "Prompt", sans-serif;
       line-height: 1.2rem;
-      height: auto;
+      height: 100%;
+      border: 1px solid #b6b5b5;
     }
 
     .product-card:hover {
       transform: scale(1.05);
-      border: 1px solid #b6b5b5;
-      box-shadow: 0 0 10px rgba(78, 78, 78, 0.8);
+      border: 2px solid #4e4d4d;
+      /*   box-shadow: 0 0 10px rgba(78, 78, 78, 0.8); */
     }
 
     .product-image {
@@ -107,6 +106,7 @@
       color: #007bff;
       font-size: 1.1rem;
       margin-top: 5px;
+      letter-spacing: 1px;
     }
 
     .product-description {
@@ -148,9 +148,11 @@
     .container {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-evenly;
+      min-height: 100vh;
+      justify-content: space-between;
       margin-top: 7rem;
+      padding: 20px;
+      height: auto;
     }
 
     /* Responsive Styles */
@@ -161,11 +163,51 @@
     }
   </style>
   <body>
+    <header>
+      <div class="top-row">
+        <div class="contact-info">
+          <div class="contact-group">
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <span class="contact-text">info@outdoorbike-shop.hr</span>
+          </div>
+          <div class="contact-group">
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <span class="contact-text">123-456-7890</span>
+          </div>
+        </div>
+        <div class="social-icons">
+          <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
+          <span class="icon"><i class="fa-brands fa-twitter"></i></span>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="bottom-row">
+        <div class="logo">
+          <img src="../images/logo14.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/partials/asideProduct.html">Bicikli</a></li>
+            <li><a href="#">Dijelovi</a></li>
+            <li><a href="#">Dodatna Oprema</a></li>
+            <li><a href="#">Akcija</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <!-- SIDEBAR -->
 
     <div class="container">
       <aside class="sidebar">
         <h3>Home / <strong>Bicikli</strong></h3>
+        <hr />
         <div class="filters">
           <h2>Filters</h2>
         </div>
@@ -303,6 +345,7 @@
           </div>
         </div>
       </div>
+
       <div class="product-card">
         <div class="product-image">
           <img
@@ -327,6 +370,90 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-row">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Bicikli</a></li>
+            <li><a href="">Doatna oprema</a></li>
+            <li><a href="">Dijelovi</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Company</h3>
+          <p>
+            Bike shop OUTDOOR specijalizirana je trgovina za bicikle i
+            biciklističku opremu, koja svoje poslovnice ima u Šibeniku, Đakovu i
+            Našicama. Kod nas možete pronaći veliki izbor gradskih, brdskih,
+            trkačih i dječjih bicikala po pristupačnim cijenama. Uz kupnju u
+            trgovinama, moguće je kupovati i u našem web shopu. Svakoga mjeseca
+            nudimo brojne akcije, gdje možete pronaći veliki broj bicikala po
+            akcijskim cijenama. Osim same prodaje nudimo uslugu velikog i malog
+            servisa na vašim biciklima te također otklanjanje kvarova i zamjenu
+            neispravnih dijelova.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Find Us</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11528.212860770936!2d15.8823767!3d43.7509917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13352f4eeb7a8057%3A0x361615fbb2fbb0ad!2sILJADICA-RAPO%20d.o.o.!5e0!3m2!1shr!2shr!4v1704699202532!5m2!1shr!2shr"
+            width="300"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="footer-row">
+        <div class="footer-column">
+          <h3>Delivery</h3>
+          <p>Information about shipping and delivery services</p>
+          <ul>
+            <li>Express/GLS</li>
+            <li>Dostava u poslovnicu</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Information</h3>
+
+          <ul>
+            <li><a href="">OUTDOORSHOP.HR</a></li>
+            <li><a href="">ADRESA: Šibenska 2A, 22000 Šibenik</a></li>
+            <li><a href="">TELEFON: +385 99 1111-211</a></li>
+            <li><a href="">EMAIL: info@outdoorbike-shop.hr</a></li>
+          </ul>
+          <img src="../images/logo14.png" alt="" height="100" width="200" />
+        </div>
+        <div class="footer-column">
+          <h3>From the Blog</h3>
+          <ul>
+            <li><a href="">Trek ima novi električni bicikl za 2024!</a></li>
+            <li><a href="">Kako odabrati prvi bicikl za dijete ?</a></li>
+            <li><a href="">Što je tubeless i kako ga koristiti</a></li>
+            <li><a href="">Kaciga je odsad obvezna i na romobilu</a></li>
+            <li><a href="">Cube najbolji omjer cijene i kvalitete</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-row">
+        <div class="footer-column">
+          <h3 class="social-icons social-icons-heading">Pratite nas:</h3>
+          <ul class="social-icons">
+            <li><a href=""></a><i class="fa-brands fa-instagram"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-twitter"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-facebook"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
+          </ul>
+          <h3 class="owner">Stranicu izradio MJ Studio</h3>
+        </div>
+      </div>
+    </footer>
 
     <script>
       const value = document.querySelector("#value");
