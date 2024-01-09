@@ -39,6 +39,8 @@ footer {
 
 .footer-column p {
   text-align: start;
+  line-height: 26px;
+  font-size: 14px;
 }
 
 .footer-column ul li a {

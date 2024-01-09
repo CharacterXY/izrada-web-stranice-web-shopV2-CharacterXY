@@ -25,6 +25,8 @@ body {
   object-fit: cover;
   background-position: center;
   width: 100%;
+
+  z-index: -1;
 }
 
 .cover::before {
