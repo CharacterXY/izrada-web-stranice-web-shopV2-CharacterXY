@@ -34,7 +34,7 @@
     }
 
     h3 {
-      padding-left: 20px;
+      /*    padding-left: 20px; */
       font-family: "Rajdhani", sans-serif;
       letter-spacing: 1px;
       font-weight: 300;
@@ -72,12 +72,14 @@
       line-height: 1.2rem;
       height: 100%;
       border: 1px solid #b6b5b5;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
     }
 
     .product-card:hover {
       transform: scale(1.05);
       border: 2px solid #4e4d4d;
-      /*   box-shadow: 0 0 10px rgba(78, 78, 78, 0.8); */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
     }
 
     .product-image {
@@ -94,6 +96,40 @@
 
     .product-info {
       padding: 20px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      border: none;
+      background-color: #fcf8f8;
+    }
+
+    .product-info:hover {
+      background-color: #fff;
+      transform: translateY(2px);
+
+      color: #fff;
+    }
+
+    .product-info.product-info-background::before {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #739b73;
+      position: absolute;
+      z-index: -1;
+      transform: scaleY(0);
+      transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      transform-origin: top;
+    }
+
+    .product-info.product-info-background:hover::before,
+    .product-info.product-info-background:focus::before {
+      transform: scaleY(1);
+    }
+
+    .product-info.product-info-background {
+      z-index: 1;
     }
 
     .product-title {
@@ -112,6 +148,25 @@
     .product-description {
       margin-top: 10px;
       font-size: 0.9rem;
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4; /* Number of lines you want to show */
+      -webkit-box-orient: vertical;
+      max-height: 100px;
+      overflow-y: auto;
+      scrollbar-width: none; /* "thin" or "auto" or "none" */
+    }
+    .product-description::-webkit-scrollbar-thumb {
+      background-color: #739b73; /* Adjust the color to fit your design */
+      border-radius: 10px; /* Rounded corners for the thumb */
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4); /* Inset shadow for the thumb */
+    }
+    /* Style the scrollbar itself (width and height) */
+    .product-description::-webkit-scrollbar {
+      width: 6px; /* Adjust the width of the scrollbar to make it thinner */
+      height: 10px;
     }
 
     .bottom-card {
@@ -125,7 +180,7 @@
     }
 
     .bottom-card i:hover {
-      color: orangered;
+      color: red;
     }
 
     .button {
@@ -133,16 +188,11 @@
       background-color: #2c312f;
       border: none;
       height: 30px;
-      width: 130px;
+      width: 120px;
       padding: 6px;
       color: #ffffff;
       transition: all 0.2s ease-in-out;
       border-radius: 2px;
-    }
-
-    .button:hover {
-      background-color: #476459;
-      letter-spacing: 1px;
     }
 
     .container {
@@ -155,6 +205,170 @@
       height: auto;
     }
 
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .modal {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s linear;
+      visibility: hidden;
+      opacity: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #739b73;
+      z-index: 9999;
+    }
+
+    .modal-right {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+
+    .modal-left,
+    .modal-right {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .modal-main-image {
+      width: 100%;
+      max-height: auto;
+      margin-bottom: 10px;
+    }
+
+    .modal-image-gallery img {
+      width: calc(30.333% - 10px); /* Subtract some margin */
+      margin-right: 5px;
+      height: auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-gallery img:last-child {
+      margin-right: 0;
+    }
+
+    .modal p {
+      padding-top: 30px;
+      font-size: 13px;
+      color: rgb(35, 37, 35);
+      font-weight: 900;
+      text-align: justify;
+    }
+
+    .modal-star-rating {
+      color: rgb(207, 188, 78);
+    }
+
+    .model-text {
+      margin: 2px 0;
+    }
+
+    .modal-product-title,
+    .modal-product-price,
+    .modal-star-rating,
+    .modal-availability,
+    .modal-product-code,
+    .modal-product-size {
+      margin-bottom: 2px;
+    }
+
+    .velicina-bicikle {
+      height: 35px;
+      width: 55px;
+      padding: auto;
+      background-color: #777;
+      outline: none;
+      border: none;
+      margin-right: 5px;
+
+      margin: 0 auto;
+      margin-top: 5px;
+      font-size: 12px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* subtle shadow */
+      transition: transform 0.1s ease, box-shadow 0.1s ease; /* for a smooth effect on click */
+    }
+
+    @media (max-width: 768px) {
+      .image-gallery img {
+        width: calc(50% - 4px); /* Adjust for fewer columns on small screens */
+      }
+    }
+
+    .modal:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: #fff;
+      padding: 1em 2em;
+      border-radius: 4px;
+      width: 80%;
+      height: auto;
+      display: flex;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 1em;
+      top: 0.5em;
+      font-size: 2.5em;
+      text-decoration: none;
+      color: red;
+    }
+
+    #btn-modal {
+      width: 30%;
+      font-size: 14px;
+      letter-spacing: 0px;
+      font-weight: 300;
+    }
+
+    .modal-product-quantity {
+      height: 10%;
+      width: 20%;
+      background-color: rgb(221, 126, 126);
+      position: relative;
+    }
+
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+    }
+
+    .quantity-btn {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background-color: #658d65;
+      cursor: pointer;
+      user-select: none; /* Sprječava označavanje teksta prilikom dvostrukog klika na gumb*/
+      width: 40px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      line-height: 1;
+      color: #333;
+    }
+
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+      border: 1px solid #ccc;
+      height: 30px; /* Orgb(70, 66, 66)o o dizajnu, visina se može prilagoditi */
+    }
     /* Responsive Styles */
     @media (max-width: 768px) {
       .product-card {
@@ -203,16 +417,12 @@
     </header>
 
     <!-- SIDEBAR -->
-
+    <h3>Home / <strong>Bicikli</strong></h3>
     <div class="container">
       <aside class="sidebar">
-        <h3>Home / <strong>Bicikli</strong></h3>
-        <hr />
-        <div class="filters">
-          <h2>Filters</h2>
-        </div>
         <form action="" method="GET">
           <h3>Brends :</h3>
+          <br />
           <hr />
           <div class="form-group">
             <input type="checkbox" id="brand1" name="brand1" value="Trek" />
@@ -226,10 +436,14 @@
             <input type="checkbox" id="brand3" name="brand3" value="Norco" />
             <label for="brand2">Norco</label>
           </div>
+          <br />
           <h3>Price:</h3>
+          <br />
           <hr />
+          <br />
           <div class="price-box">
             <p>Please select your price:</p>
+            <br />
             <input type="radio" id="price1" name="price" value="100" />
             <label for="price1">0 - 100 € </label><br />
             <input type="radio" id="price2" name="price" value="500" />
@@ -244,31 +458,107 @@
               max="5000"
               value="0"
               step="10"
-            /><label for="price"> Price</label>
-            <p>(0-5000)</p>
-            <p>Value: <output id="value"></output></p>
+            /><br /><br />
+
+            <p>Value: <output id="value"></output> €</p>
           </div>
         </form>
       </aside>
 
       <div class="product-card">
         <div class="product-image">
-          <img src="../images/LAPIERRE_BIKE.jpg" alt="Product Image" />
+          <img src="../images/fuel-ex-8.webp" alt="Product Image" />
         </div>
-        <div class="product-info">
+        <div class="product-info product-info-background">
           <div class="product-titile">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
           <div class="product-price">€190.99</div>
           <div class="product-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            in quam totam repudiandae nam eveniet et dolor temporibus officiis
-            aspernatur?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab fugit
+            quisquam repellendus? Dolore, illo eveniet. Est odit, officia vel
+            hic eligendi repellendus possimus soluta perspiciatis rem itaque
+            dignissimos laudantium debitis neque ab iusto vitae atque veniam ad
+            fugiat consequatur magni tempore impedit. Reiciendis harum
+            blanditiis earum, mollitia provident autem sunt.
           </div>
           <div class="bottom-card">
             <button value="submit" class="button">Dodaj u Košaricu</button>
-            <i class="fa-solid fa-heart"></i>
+
+            <button class="button">
+              <a href="#modal-box">Detalji proizvoda</a>
+            </button>
           </div>
+        </div>
+      </div>
+
+      <!--MODAL WINDOWS FOR DETAILS OF PRODUCTS -->
+      <div id="modal-box" class="modal">
+        <div class="modal-content">
+          <div class="modal-left">
+            <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
+            <img
+              src="../images/fuel-ex-8.webp"
+              alt="Main Prodcut Image"
+              class="modal-main-image"
+            />
+
+            <div class="modal-image-gallery">
+              <img src="../images/fuel-ex-8(1).webp" alt="" />
+              <img src="../images/fuel-ex-8(2).webp" alt="" />
+              <img src="../images/fuel-ex-8(3).webp" alt="" />
+            </div>
+            <p>
+              * Podaci navedeni na ovoj stranici su informativne prirode i nisu
+              obvezujući. Slike ne moraju odgovarati točno proizvodu na
+              stranici, svi podaci su podložni promjeni bez prethodne najave.
+            </p>
+          </div>
+
+          <div class="modal-right">
+            <h3 class="modal-product-title">
+              TREK Fuel EXe 8.0 2023 Matte Pennyflake
+              <span class="modal-star-rating"> ★★★★☆</span> (0)
+            </h3>
+            <div class="modal-product-price">
+              <strong>Price:</strong> 2100 €
+            </div>
+
+            <div class="modal-availability">
+              <span><i class="fa-solid fa-warehouse"></i></span> Availability: U
+              WEBSHOPU
+            </div>
+            <div class="modal-prodcut-code">Product Code: 90622-5056</div>
+            <div class="modal-product-size">
+              <h3>Velicina</h3>
+              <p>Odaberi velicinu</p>
+              <br />
+              <button class="velicina-bicikle"><a href="">S-27.5"</a></button>
+              <button class="velicina-bicikle"><a href="">XS-27.5"</a></button>
+              <button class="velicina-bicikle"><a href="">S</a></button>
+              <button class="velicina-bicikle"><a href="">M</a></button>
+              <button class="velicina-bicikle"><a href="">M/L</a></button>
+              <button class="velicina-bicikle"><a href="">L</a></button>
+              <button class="velicina-bicikle"><a href="">XL</a></button>
+            </div>
+
+            <div class="quantity-selector">
+              <button class="quantity-btn" id="decrement">-</button>
+              <input
+                id="quantity-input"
+                class="quantity-input"
+                value="1"
+                min="1"
+              />
+              <button class="quantity-btn" id="increase">+</button>
+            </div>
+
+            <button class="btn btn-background" id="btn-modal">
+              Dodaj u košaricu
+            </button>
+          </div>
+
+          <a href="#" class="modal-close">&times;</a>
         </div>
       </div>
 
@@ -281,11 +571,14 @@
             alt="Product Image"
           />
         </div>
-        <div class="product-info">
+
+        <div class="product-info product-info-background">
           <div class="product-titile">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
+
           <div class="product-price">€190.99</div>
+
           <div class="product-description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
             in quam totam repudiandae nam eveniet et dolor temporibus officiis
@@ -293,7 +586,6 @@
           </div>
           <div class="bottom-card">
             <button value="submit" class="button">Dodaj u Košaricu</button>
-            <i class="fa-solid fa-heart"></i>
           </div>
         </div>
       </div>
@@ -306,7 +598,7 @@
             alt="Product Image"
           />
         </div>
-        <div class="product-info">
+        <div class="product-info product-info-background">
           <div class="product-titile">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
@@ -329,31 +621,7 @@
             alt="Product Image"
           />
         </div>
-        <div class="product-info">
-          <div class="product-titile">
-            TREK Fuel EXe 9.7 2023 Matte Pennyflake
-          </div>
-          <div class="product-price">€190.99</div>
-          <div class="product-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            in quam totam repudiandae nam eveniet et dolor temporibus officiis
-            aspernatur?
-          </div>
-          <div class="bottom-card">
-            <button value="submit" class="button">Dodaj u Košaricu</button>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image">
-          <img
-            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
-            alt="Product Image"
-          />
-        </div>
-        <div class="product-info">
+        <div class="product-info product-info-background">
           <div class="product-titile">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
@@ -462,6 +730,24 @@
       input.addEventListener("input", (event) => {
         value.textContent = event.target.value;
       });
+
+      document
+        .getElementById("increase")
+        .addEventListener("click", function () {
+          var quantityInput = document.getElementById("quantity-input");
+          var currentValue = parseInt(quantityInput.value, 10);
+          quantityInput.value = currentValue + 1;
+        });
+
+      document
+        .getElementById("decrement")
+        .addEventListener("click", function () {
+          var quantityInput = document.getElementById("quantity-input");
+          var currentValue = parseInt(quantityInput.value, 10);
+          if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+          }
+        });
     </script>
   </body>
 </html>
