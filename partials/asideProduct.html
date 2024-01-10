@@ -152,20 +152,20 @@
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
-      -webkit-line-clamp: 4; /* Number of lines you want to show */
+      -webkit-line-clamp: 4; /* Broj linija koje zelimo prikazati */
       -webkit-box-orient: vertical;
       max-height: 100px;
       overflow-y: auto;
-      scrollbar-width: none; /* "thin" or "auto" or "none" */
+      scrollbar-width: none;
     }
     .product-description::-webkit-scrollbar-thumb {
-      background-color: #739b73; /* Adjust the color to fit your design */
-      border-radius: 10px; /* Rounded corners for the thumb */
-      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4); /* Inset shadow for the thumb */
+      background-color: #739b73;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
     }
     /* Style the scrollbar itself (width and height) */
     .product-description::-webkit-scrollbar {
-      width: 6px; /* Adjust the width of the scrollbar to make it thinner */
+      width: 6px;
       height: 10px;
     }
 
@@ -246,11 +246,22 @@
       margin-bottom: 10px;
     }
 
+    .modal-image-gallery {
+      position: relative;
+      padding: 1em;
+    }
+
     .modal-image-gallery img {
       width: calc(30.333% - 10px); /* Subtract some margin */
       margin-right: 5px;
       height: auto;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      filter: blur(0);
+    }
+
+    .modal-image-gallery img:hover {
+      transform: scale(1.3);
     }
 
     .image-gallery img:last-child {
@@ -286,11 +297,10 @@
       height: 35px;
       width: 55px;
       padding: auto;
-      background-color: #777;
+      background-color: #658d65;
       outline: none;
       border: none;
       margin-right: 5px;
-
       margin: 0 auto;
       margin-top: 5px;
       font-size: 12px;
@@ -349,25 +359,28 @@
 
     .quantity-btn {
       padding: 5px 10px;
-      border: 1px solid #ccc;
+      border: none;
       background-color: #658d65;
       cursor: pointer;
       user-select: none; /* Sprječava označavanje teksta prilikom dvostrukog klika na gumb*/
       width: 40px;
-      height: 30px;
+      height: 32px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bold;
       line-height: 1;
-      color: #333;
+      color: white;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .quantity-input {
-      width: 50px;
+      width: 40px;
       text-align: center;
-      border: 1px solid #ccc;
+      border: none;
+      outline: 1px solid green;
       height: 30px; /* Orgb(70, 66, 66)o o dizajnu, visina se može prilagoditi */
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
     }
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -504,9 +517,9 @@
             />
 
             <div class="modal-image-gallery">
-              <img src="../images/fuel-ex-8(1).webp" alt="" />
-              <img src="../images/fuel-ex-8(2).webp" alt="" />
-              <img src="../images/fuel-ex-8(3).webp" alt="" />
+              <img src="../images/fuel-ex-8(1).webp" alt="fulex-ex-8" />
+              <img src="../images/fuel-ex-8(2).webp" alt="fulex-ex-8" />
+              <img src="../images/fuel-ex-8(3).webp" alt="fulex-ex-8" />
             </div>
             <p>
               * Podaci navedeni na ovoj stranici su informativne prirode i nisu
@@ -554,7 +567,7 @@
             </div>
 
             <button class="btn btn-background" id="btn-modal">
-              Dodaj u košaricu
+              <i class="fas fa-shopping-cart"></i> Dodaj u košaricu
             </button>
           </div>
 
@@ -637,7 +650,9 @@
             aspernatur?
           </div>
           <div class="bottom-card">
-            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <button value="submit" class="button">
+              <i class="fas fa-shopping-cart"></i>Dodaj u Košaricu
+            </button>
             <button class="button">
               <a href="#modal-box">Detalji proizvoda</a>
             </button>
