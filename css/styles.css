@@ -182,13 +182,11 @@ header {
   justify-content: space-between;
   background-color: #739b73;
   padding-bottom: 10px;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-right: 5em;
+  padding-left: 5em;
 }
 
 .contact-group {
-  display: flex;
-  align-items: center;
   padding-left: 0.7em;
 }
 
@@ -196,18 +194,14 @@ header {
   margin-left: 5px;
 }
 
-.social-icons {
+.icon-container {
   display: flex;
-  justify-content: flex-end;
-}
-
-.icon {
-  margin-right: 2px;
+  justify-self: flex-end;
+  justify-content: end;
 }
 
 .search-bar {
   display: flex;
-  align-items: center;
   margin-top: 10px;
 }
 
@@ -920,6 +914,8 @@ section .column {
   display: none;
   opacity: 0;
   transition: all 0.3s ease-out;
+  padding-left: 5em !important;
+  padding-right: 5em !important;
 }
 
 .mobile-searchbar input {
@@ -989,11 +985,12 @@ form .mobile-searchbar input {
   }
   .mobile-icons {
     display: contents;
+    align-items: center;
     opacity: 1;
     color: #fffdfd;
+    float: right;
   }
   .mobile-icons .icon-container {
-    align-self: center;
     font-size: 16px;
   }
 }
@@ -1009,17 +1006,17 @@ form .mobile-searchbar input:focus {
 .cart-count {
   position: absolute;
   top: 1px;
-  right: 40px;
+  right: 85px;
   background-color: red;
   color: white;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 5px;
+  height: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  padding: 8px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
