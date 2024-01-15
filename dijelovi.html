@@ -3,13 +3,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/styles.css" />
   </head>
-
   <body>
     <header>
       <div class="top-row">
@@ -39,7 +38,7 @@
             <div class="cart-items">
               <div class="cart-item">
                 <img
-                  src="../images/fuel-ex-8.webp"
+                  src="images/fuel-ex-8.webp"
                   alt="Artikl"
                   class="item-image"
                 />
@@ -96,12 +95,12 @@
 
       <div class="bottom-row">
         <div class="logo">
-          <img src="../images/logo14.png" alt="Logo" />
+          <img src="images/logo14.png" alt="Logo" />
         </div>
         <nav>
           <ul>
             <li><a href="/partials/asideProduct.html">Bicikli</a></li>
-            <li><a href="../dijelovi.html">Dijelovi</a></li>
+            <li><a href="#">Dijelovi</a></li>
             <li><a href="#">Dodatna Oprema</a></li>
             <li><a href="#">Akcija</a></li>
             <li><a href="#">Blog</a></li>
@@ -112,17 +111,71 @@
 
     <!-- SIDEBAR -->
     <div class="breadcrump">
-      <h3><a href="../index.html">Home</a> / <strong>Bicikli</strong></h3>
+      <h3><a href="../index.html">Home</a> / <strong>Dijelovi</strong></h3>
     </div>
 
     <div class="container">
       <aside class="sidebar">
         <form action="" method="GET">
+          <div class="form-group">
+            <h3>Category</h3>
+            <hr />
+            <br />
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="kotaci" />
+            <label for="brand2">Kotaci</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="checkbox"
+              id="brand3"
+              name="brand3"
+              value="Lanci"
+              checked
+            />
+            <label for="brand2">Lanci</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="Pedale" />
+            <label for="brand2">Pedale</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="mjenjaci" />
+            <label for="brand2">Mjenjaci</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="tubeless" />
+            <label for="brand2">Tubeless</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="vilice" />
+            <label for="brand2">Vilice</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="brand3" name="brand3" value="zracnice" />
+            <label for="brand2">Zracnice</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="checkbox"
+              id="brand3"
+              name="brand3"
+              value="sajle_buziri"
+            />
+            <label for="brand2">Sajle i buziri</label>
+          </div>
           <h3>Brends :</h3>
           <br />
           <hr />
           <div class="form-group">
-            <input type="checkbox" id="brand1" name="brand1" value="Trek" />
+            <input
+              type="checkbox"
+              id="brand1"
+              name="brand1"
+              value="Trek"
+              checked
+            />
             <label for="brand1">Trek</label>
           </div>
           <div class="form-group">
@@ -133,6 +186,7 @@
             <input type="checkbox" id="brand3" name="brand3" value="Norco" />
             <label for="brand2">Norco</label>
           </div>
+
           <br />
           <h3>Price:</h3>
           <br />
@@ -164,20 +218,17 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="../images/fuel-ex-8.webp" alt="Product Image" />
+          <img
+            src="images/lanac-shimano-cn-hg601-11-116cl-11brz-za-trkaci-mtb-e-bike--24455-0-16620686287292-o.webp"
+            alt="Product Image"
+          />
         </div>
         <div class="product-info product-info-background">
-          <div class="product-title">
-            TREK Fuel EXe 9.7 2023 Matte Pennyflake
-          </div>
-          <div class="product-price">2100.00 €</div>
+          <div class="product-title">Lanac Shimano CN-HG601</div>
+          <div class="product-price">36.99 €</div>
           <div class="product-description">
-            Fuel EX is a full suspension bike that’s made to hit every trail,
-            every day. From epic long-distance rides to rowdy local trails after
-            work, Fuel EX’s balanced geometry and sweet-spot suspension set-up
-            give you nerve for descents and heart for climbs. We don’t think you
-            should have to choose just one mountain bike. But if you do, choose
-            this one.
+            SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB /
+            E-BIKE)
           </div>
           <div class="bottom-card">
             <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
@@ -265,22 +316,19 @@
       <div class="product-card">
         <div class="product-image">
           <img
-            src="../images/fuel-ex-9-7-gen-6-2023-crimson-35843-16710499036144-o.webp"
+            src="images/mjenjac-zadnji-shimano-deore-rd-t6000-sgs-10-brzina-shadow-direct-attachment-37632-17025481928613-o.webp"
             alt="Product Image"
           />
         </div>
 
         <div class="product-info product-info-background">
-          <div class="product-title">
-            TREK Fuel EXe 9.7 2023 Matte Pennyflake
-          </div>
+          <div class="product-title">SHIMANO DEORE RD-T6000</div>
 
           <div class="product-price">€190.99</div>
 
           <div class="product-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            in quam totam repudiandae nam eveniet et dolor temporibus officiis
-            aspernatur?
+            SHIMANO MJENJAČ ZADNJI SHIMANO DEORE RD-T6000-SGS,10 BRZINA,SHADOW,
+            DIRECT ATTACHMENT
           </div>
           <div class="bottom-card">
             <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
@@ -296,45 +344,16 @@
       <div class="product-card">
         <div class="product-image">
           <img
-            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
+            src="images/rotor-sram-centerline-x-rotor-rounded-160-mm-with-bolts-32404-0-16620708074021-o.webp"
             alt="Product Image"
           />
         </div>
         <div class="product-info product-info-background">
-          <div class="product-title">
-            TREK Fuel EXe 9.7 2023 Matte Pennyflake
-          </div>
-          <div class="product-price">€190.99</div>
+          <div class="product-title">SRAM ROTOR</div>
+          <div class="product-price">47.99 €</div>
           <div class="product-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            in quam totam repudiandae nam eveniet et dolor temporibus officiis
-            aspernatur?
-          </div>
-          <div class="bottom-card">
-            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
-
-            <a href="#modal-box"
-              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <img
-            src="../images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
-            alt="Product Image"
-          />
-        </div>
-        <div class="product-info product-info-background">
-          <div class="product-title">
-            TREK Fuel EXe 9.7 2023 Matte Pennyflake
-          </div>
-          <div class="product-price">€190.99</div>
-          <div class="product-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            in quam totam repudiandae nam eveniet et dolor temporibus officiis
-            aspernatur?
+            SRAM ROTOR SRAM ROTOR CENTERLINE 2 PIECE 160MM BLACK (INCLUDES STEEL
+            ROTOR BOLTS) ROUNDED
           </div>
           <div class="bottom-card">
             <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
@@ -346,116 +365,28 @@
         </div>
       </div>
     </div>
-
-    <footer>
-      <div class="footer-row">
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Bicikli</a></li>
-            <li><a href="">Doatna oprema</a></li>
-            <li><a href="">Dijelovi</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>About Company</h3>
-          <p>
-            Bike shop OUTDOOR specijalizirana je trgovina za bicikle i
-            biciklističku opremu, koja svoje poslovnice ima u Šibeniku, Đakovu i
-            Našicama. Kod nas možete pronaći veliki izbor gradskih, brdskih,
-            trkačih i dječjih bicikala po pristupačnim cijenama. Uz kupnju u
-            trgovinama, moguće je kupovati i u našem web shopu. Svakoga mjeseca
-            nudimo brojne akcije, gdje možete pronaći veliki broj bicikala po
-            akcijskim cijenama. Osim same prodaje nudimo uslugu velikog i malog
-            servisa na vašim biciklima te također otklanjanje kvarova i zamjenu
-            neispravnih dijelova.
-          </p>
-        </div>
-        <div class="footer-column">
-          <h3>Find Us</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11528.212860770936!2d15.8823767!3d43.7509917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13352f4eeb7a8057%3A0x361615fbb2fbb0ad!2sILJADICA-RAPO%20d.o.o.!5e0!3m2!1shr!2shr!4v1704699202532!5m2!1shr!2shr"
-            width="300"
-            height="200"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="footer-row">
-        <div class="footer-column">
-          <h3>Delivery</h3>
-          <p>Information about shipping and delivery services</p>
-          <ul>
-            <li>Express/GLS</li>
-            <li>Dostava u poslovnicu</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Information</h3>
-
-          <ul>
-            <li><a href="">OUTDOORSHOP.HR</a></li>
-            <li><a href="">ADRESA: Šibenska 2A, 22000 Šibenik</a></li>
-            <li><a href="">TELEFON: +385 99 1111-211</a></li>
-            <li><a href="">EMAIL: info@outdoorbike-shop.hr</a></li>
-          </ul>
-          <img src="../images/logo14.png" alt="" height="100" width="200" />
-        </div>
-        <div class="footer-column">
-          <h3>From the Blog</h3>
-          <ul>
-            <li><a href="">Trek ima novi električni bicikl za 2024!</a></li>
-            <li><a href="">Kako odabrati prvi bicikl za dijete ?</a></li>
-            <li><a href="">Što je tubeless i kako ga koristiti</a></li>
-            <li><a href="">Kaciga je odsad obvezna i na romobilu</a></li>
-            <li><a href="">Cube najbolji omjer cijene i kvalitete</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-row">
-        <div class="footer-column">
-          <h3 class="social-icons social-icons-heading">Pratite nas:</h3>
-          <ul class="social-icons">
-            <li><a href=""></a><i class="fa-brands fa-instagram"></i></li>
-            <li><a href=""></a><i class="fa-brands fa-twitter"></i></li>
-            <li><a href=""></a><i class="fa-brands fa-facebook"></i></li>
-            <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
-          </ul>
-          <h3 class="owner">Stranicu izradio Marko</h3>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      const value = document.querySelector("#value");
-      const input = document.querySelector("#price");
-      value.textContent = input.value;
-      input.addEventListener("input", (event) => {
-        value.textContent = event.target.value;
-      });
-
-      document
-        .getElementById("increase")
-        .addEventListener("click", function () {
-          var quantityInput = document.getElementById("quantity-input");
-          var currentValue = parseInt(quantityInput.value, 10);
-          quantityInput.value = currentValue + 1;
-        });
-
-      document
-        .getElementById("decrement")
-        .addEventListener("click", function () {
-          var quantityInput = document.getElementById("quantity-input");
-          var currentValue = parseInt(quantityInput.value, 10);
-          if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-          }
-        });
-    </script>
   </body>
+
+  <script>
+    const value = document.querySelector("#value");
+    const input = document.querySelector("#price");
+    value.textContent = input.value;
+    input.addEventListener("input", (event) => {
+      value.textContent = event.target.value;
+    });
+
+    document.getElementById("increase").addEventListener("click", function () {
+      var quantityInput = document.getElementById("quantity-input");
+      var currentValue = parseInt(quantityInput.value, 10);
+      quantityInput.value = currentValue + 1;
+    });
+
+    document.getElementById("decrement").addEventListener("click", function () {
+      var quantityInput = document.getElementById("quantity-input");
+      var currentValue = parseInt(quantityInput.value, 10);
+      if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+      }
+    });
+  </script>
 </html>

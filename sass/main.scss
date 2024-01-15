@@ -189,6 +189,10 @@
   padding: 0.7rem;
 }
 
+.form-group h3 {
+  padding-bottom: 1em;
+}
+
 h2 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 600;
@@ -199,6 +203,7 @@ h3 {
   font-family: "Rajdhani", sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
+  margin-top: 1em;
 }
 
 .price-box {
@@ -215,7 +220,8 @@ h3 {
 }
 
 .form-group label {
-  font-family: "Prompt", sans-serif;
+  font-family: "Montserrat", sans-serif;
+
   font-size: 16px;
 }
 
@@ -665,4 +671,15 @@ form .mobile-searchbar input:focus {
   padding-left: 5em;
   padding-top: 2em;
   font-family: "Montserrat", sans-serif;
+}
+
+hr {
+  border: none; /* Removes the default border */
+  height: 2px; /* Set the thickness of the hr line */
+  background-image: linear-gradient(
+    to right,
+    #99c48a,
+    #87af7a,
+    #99c48a
+  ); /* Gradient effect */
 }
