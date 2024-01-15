@@ -16,24 +16,84 @@
         <div class="contact-info">
           <div class="contact-group">
             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-            <span class="contact-text">info@outdoorbike-shop.hr</span>
+            <span class="contact-text"
+              ><a href="">info@outdoorbike-shop.hr</a></span
+            >
           </div>
           <div class="contact-group">
             <span class="icon"><i class="fa-solid fa-phone"></i></span>
-            <span class="contact-text">123-456-7890</span>
+            <span class="contact-text"><a href="">123-456-7890</a></span>
           </div>
         </div>
         <div class="social-icons">
-          <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
-          <span class="icon"><i class="fa-brands fa-twitter"></i></span>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search..." />
+
+        <!-------------------------------- SHOPING CARD MODAL ------------------------------------------->
+
+        <div id="card-modal" class="modal">
+          <div class="card-content">
+            <a href=""><span class="close-button">&times;</span></a>
+            <h2>Vaša Košarica</h2>
+            <div class="cart-items">
+              <div class="cart-item">
+                <img
+                  src="../images/fuel-ex-8.webp"
+                  alt="Artikl"
+                  class="item-image"
+                />
+                <div class="item-details">
+                  <p class="item-name">Trek Fulex Exe 8.0</p>
+                  <p class="item-price">2100.00 €</p>
+                  <input type="number" value="1" class="item-quantity" />
+                </div>
+              </div>
+            </div>
+            <div class="cart-total">
+              <p>Ukupno: <span>2100.00 €</span></p>
+            </div>
+            <button class="checkout-button">Naplata</button>
+          </div>
+        </div>
+
+        <form action="" method="GET">
+          <div class="search-area">
+            <div class="search-bar">
+              <input type="text" placeholder="Search Something ..." />
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icon-container">
+              <div class="icon-with-text">
+                <a href="" class=""><i class="fas fa-user-plus"></i></a>
+                <span class="icon-text">Prijavi se</span>
+              </div>
+              <div class="icon-with-text">
+                <a href="#card-modal"
+                  ><i class="fas fa-shopping-cart"></i>
+                  <span class="cart-counter">3</span></a
+                >
+                <span class="icon-text">Košarica</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--OVO JE SEARCHBAR ZA MALE REZOLUCIJE, MOBITEL-->
+      <form action="" method="GET" id="mobile-search-form">
+        <div class="mobile-searchbar">
+          <input
+            type="text"
+            placeholder="Search Something ..."
+            class="bijeli-placeholder"
+          />
           <button type="submit">
-            <i class="fas fa-search"></i>
+            <i id="mobile-search-icon" class="fas fa-search"></i>
           </button>
         </div>
-      </div>
+      </form>
+
       <div class="bottom-row">
         <div class="logo">
           <img src="../images/logo14.png" alt="Logo" />
@@ -51,7 +111,10 @@
     </header>
 
     <!-- SIDEBAR -->
-    <h3>Home / <strong>Bicikli</strong></h3>
+    <div class="breadcrump">
+      <h3><a href="../index.html">Home</a> / <strong>Bicikli</strong></h3>
+    </div>
+
     <div class="container">
       <aside class="sidebar">
         <form action="" method="GET">
@@ -104,24 +167,24 @@
           <img src="../images/fuel-ex-8.webp" alt="Product Image" />
         </div>
         <div class="product-info product-info-background">
-          <div class="product-titile">
+          <div class="product-title">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
-          <div class="product-price">€190.99</div>
+          <div class="product-price">2100.00 €</div>
           <div class="product-description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab fugit
-            quisquam repellendus? Dolore, illo eveniet. Est odit, officia vel
-            hic eligendi repellendus possimus soluta perspiciatis rem itaque
-            dignissimos laudantium debitis neque ab iusto vitae atque veniam ad
-            fugiat consequatur magni tempore impedit. Reiciendis harum
-            blanditiis earum, mollitia provident autem sunt.
+            Fuel EX is a full suspension bike that’s made to hit every trail,
+            every day. From epic long-distance rides to rowdy local trails after
+            work, Fuel EX’s balanced geometry and sweet-spot suspension set-up
+            give you nerve for descents and heart for climbs. We don’t think you
+            should have to choose just one mountain bike. But if you do, choose
+            this one.
           </div>
           <div class="bottom-card">
-            <button value="submit" class="button">Dodaj u Košaricu</button>
+            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
 
-            <button class="button">
-              <a href="#modal-box">Detalji proizvoda</a>
-            </button>
+            <a href="#modal-box"
+              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -131,6 +194,7 @@
         <div class="modal-content">
           <div class="modal-left">
             <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
+            <!-- u buducnosti ce se prikazivati dinamicki model iz baze podataka-->
             <img
               src="../images/fuel-ex-8.webp"
               alt="Main Prodcut Image"
@@ -207,7 +271,7 @@
         </div>
 
         <div class="product-info product-info-background">
-          <div class="product-titile">
+          <div class="product-title">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
 
@@ -219,10 +283,11 @@
             aspernatur?
           </div>
           <div class="bottom-card">
-            <button value="submit" class="button">Dodaj u Košaricu</button>
-            <button class="button">
-              <a href="#modal-box">Detalji proizvoda</a>
-            </button>
+            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+            <a href="#modal-box"
+              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -236,7 +301,7 @@
           />
         </div>
         <div class="product-info product-info-background">
-          <div class="product-titile">
+          <div class="product-title">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
           <div class="product-price">€190.99</div>
@@ -246,10 +311,11 @@
             aspernatur?
           </div>
           <div class="bottom-card">
-            <button value="submit" class="button">Dodaj u Košaricu</button>
-            <button class="button">
-              <a href="#modal-box">Detalji proizvoda</a>
-            </button>
+            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+            <a href="#modal-box"
+              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -261,7 +327,7 @@
           />
         </div>
         <div class="product-info product-info-background">
-          <div class="product-titile">
+          <div class="product-title">
             TREK Fuel EXe 9.7 2023 Matte Pennyflake
           </div>
           <div class="product-price">€190.99</div>
@@ -271,12 +337,11 @@
             aspernatur?
           </div>
           <div class="bottom-card">
-            <button value="submit" class="button">
-              <i class="fas fa-shopping-cart"></i>Dodaj u Košaricu
-            </button>
-            <button class="button">
-              <a href="#modal-box">Detalji proizvoda</a>
-            </button>
+            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+            <a href="#modal-box"
+              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -361,7 +426,7 @@
             <li><a href=""></a><i class="fa-brands fa-facebook"></i></li>
             <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
           </ul>
-          <h3 class="owner">Stranicu izradio MJ Studio</h3>
+          <h3 class="owner">Stranicu izradio Marko</h3>
         </div>
       </div>
     </footer>

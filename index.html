@@ -28,11 +28,11 @@
             <div class="contact-info">
               <div class="contact-group">
                 <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                <span class="contact-text">info@outdoorbike-shop.hr</span>
+                <span class="contact-text"><a href="">info@outdoorbike-shop.hr</a></span>
               </div>
               <div class="contact-group">
                 <span class="icon"><i class="fa-solid fa-phone"></i></span>
-                <span class="contact-text">123-456-7890</span>
+                <span class="contact-text"><a href="">123-456-7890</a></span>
               </div>
             </div>
             <div class="social-icons">
@@ -40,29 +40,56 @@
               <i class="fa-brands fa-twitter"></i>
             </div>
 
-            <div class="mobile-icons">
-           
-                <i class="fas fa-user-plus"></i>
-                <i class="fas fa-shopping-cart"></i> 
-               
-                <span class="cart-count">1</span> 
-              </div>
+       
 
+        
+
+              <!-------------------------------- SHOPING CARD MODAL ------------------------------------------->
+
+            <div id="card-modal" class="modal">
+              <div class="card-content">
+                <a href=""><span class="close-button">&times;</span></a>
+                <h2>Vaša Košarica</h2>
+                <div class="cart-items">
       
+                  <div class="cart-item">
+                    <img src="images/fuel-ex-8.webp" alt="Artikl" class="item-image">
+                    <div class="item-details">
+                      <p class="item-name">Trek Fulex Exe 8.0</p>
+                      <p class="item-price">2100.00 €</p>
+                      <input type="number" value="1" class="item-quantity">
+                    </div>
+                  </div>
+           
+                </div>
+                <div class="cart-total">
+                  <p>Ukupno: <span>2100.00 €</span></p>
+                </div>
+                <button class="checkout-button">Naplata</button>
+              </div>
+            </div>
           
 
           <form action="" method="GET">
+            <div class="search-area">
               <div class="search-bar">
-        
                 <input type="text" placeholder="Search Something ..." />
                 <button type="submit"><i class="fas fa-search"></i></button>
               </div>
+              <div class="icon-container">
+                <div class="icon-with-text">
+                  <a href="" class=""><i class="fas fa-user-plus"></i></a>
+                  <span class="icon-text">Prijavi se</span>
+                </div>
+                <div class="icon-with-text">
+                  <a href="#card-modal"><i class="fas fa-shopping-cart"></i>
+                    <span class="cart-counter">3</span></a>
+                  <span class="icon-text">Košarica</span>
+                </div>
+              </div>
+            </div>
           </form>
-
-
-
-          </div>
-
+        </div>
 
              <!--OVO JE SEARCHBAR ZA MALE REZOLUCIJE, MOBITEL-->
              <form action="" method="GET" id="mobile-search-form">
@@ -73,12 +100,8 @@
             </form>
 
 
-
-
-
           <div class="bottom-row">
-            
-       
+          
             <div class="logo">
               <img src="images/logo14.png" alt="Logo" />
             </div>
@@ -93,8 +116,10 @@
             </nav>
           </div>
         </header>
-      </body>
-    </html>
+
+
+
+
 
     <!---------------------------------- BANNER SLIKA ------------------------------------------------------------>
     <div class="cover">
@@ -180,37 +205,6 @@
     <footer>
       <div class="footer-row">
         <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Bicikli</a></li>
-            <li><a href="">Doatna oprema</a></li>
-            <li><a href="">Dijelovi</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>About Company</h3>
-          <p>
-            Bike shop OUTDOOR specijalizirana je trgovina za bicikle i biciklističku opremu, koja svoje poslovnice ima u Šibeniku, Đakovu i Našicama. Kod nas možete pronaći veliki izbor gradskih, brdskih, trkačih i dječjih bicikala po pristupačnim cijenama. Uz kupnju u trgovinama, moguće je kupovati i u našem web shopu. Svakoga mjeseca nudimo brojne akcije, gdje možete pronaći veliki broj bicikala po akcijskim cijenama. Osim same prodaje nudimo uslugu velikog i malog servisa na vašim biciklima te također otklanjanje kvarova i zamjenu neispravnih dijelova.
-          </p>
-        </div>
-        <div class="footer-column">
-          <h3>Find Us</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11528.212860770936!2d15.8823767!3d43.7509917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13352f4eeb7a8057%3A0x361615fbb2fbb0ad!2sILJADICA-RAPO%20d.o.o.!5e0!3m2!1shr!2shr!4v1704699202532!5m2!1shr!2shr"
-            width="300"
-            height="200"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-
-
-      <div class="footer-row">
-        <div class="footer-column">
           <h3>Delivery</h3>
           <p>Information about shipping and delivery services</p>
           <ul>
@@ -238,6 +232,39 @@
             <li><a href="">Cube najbolji omjer cijene i kvalitete</a></li>
           </ul>
         </div>
+
+      </div>
+
+
+      <div class="footer-row">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Bicikli</a></li>
+            <li><a href="">Doatna oprema</a></li>
+            <li><a href="">Dijelovi</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Company</h3>
+          <p>
+            Bike shop OUTDOOR specijalizirana je trgovina za bicikle i biciklističku opremu, koja svoje poslovnice ima u Šibeniku, Đakovu i Našicama. Kod nas možete pronaći veliki izbor gradskih, brdskih, trkačih i dječjih bicikala po pristupačnim cijenama. Uz kupnju u trgovinama, moguće je kupovati i u našem web shopu. Svakoga mjeseca nudimo brojne akcije, gdje možete pronaći veliki broj bicikala po akcijskim cijenama. Osim same prodaje nudimo uslugu velikog i malog servisa na vašim biciklima te također otklanjanje kvarova i zamjenu neispravnih dijelova.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Find Us</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11528.212860770936!2d15.8823767!3d43.7509917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13352f4eeb7a8057%3A0x361615fbb2fbb0ad!2sILJADICA-RAPO%20d.o.o.!5e0!3m2!1shr!2shr!4v1704699202532!5m2!1shr!2shr"
+            width="300"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+     
       </div>
       <div class="footer-row">
         <div class="footer-column">
