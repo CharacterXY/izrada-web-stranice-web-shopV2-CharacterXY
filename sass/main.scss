@@ -1,15 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Cardo:ital,wght@0,400;0,700;1,400&family=Inconsolata:wght@200..900&family=Montserrat:wght@300&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@900&family=Rajdhani&family=Rubik+Mono+One&family=Staatliches&display=swap");
+
 @import "product-card";
 @import "footer";
 @import "header";
 @import "base";
 @import "card-modal";
+@import "aside";
+
+:root {
+  --background-primary: #648167;
+  --background-secondary: rgb(232, 226, 226);
+  --text-primary: rgb(29, 34, 32);
+  --text-secondary: rgb(219, 219, 219);
+  --main-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.1);
+}
+
+* {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: width none;
+}
 
 // Tu pocinjem ugnjezdivat CSS koliko bolje mogu.
 
 html {
   // This defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .cover {
@@ -44,7 +79,7 @@ html {
 .text-box {
   position: absolute;
   left: 20%;
-  top: 43%;
+  top: 33%;
 }
 
 .heading-primary {
@@ -61,7 +96,6 @@ html {
   letter-spacing: 8.4px;
   padding-bottom: 20px;
   font-weight: 700;
-  font-family: "Rubik Mono One", monospace;
 }
 
 .heading-primary-sub {
@@ -69,20 +103,19 @@ html {
   font-size: 30px;
   font-weight: 200;
   letter-spacing: 14.4px;
-  font-family: "Rajdhani", sans-serif;
 }
 
 .btn {
   font-size: 1rem;
   font-weight: 700;
   padding: 0.5em 1em;
-
   border: none;
-  color: #3b0a0a;
+  color: var(--text-secondary);
   transition: all 0.2s ease-out;
   position: relative;
   display: inline-block;
   margin: 0;
+  background-color: var(--background-primary);
 }
 
 .btn a {
@@ -125,31 +158,6 @@ html {
   z-index: 1;
 }
 
-/* .btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 13px 20px;
-  transition: all 0.2s;
-  bottom: 20px;
-  font-size: 14px;
-}
-
-.btn:hover {
-  box-shadow: 0 5px 20px rgba(247, 247, 247, 0.2);
-  background-color: #739b73;
-}
-
-.btn:active {
-  transform: translateY(-1px);
-}
-
- .btn-white {
-  background-color: #739b73;
-  color: rgb(255, 255, 255);
-} */
-
 .newsletter-page {
   background-color: rgb(224, 220, 220);
   display: flex;
@@ -168,7 +176,7 @@ html {
   object-fit: contain;
 }
 
-.newsletter-text {
+.newsletter-form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -198,8 +206,10 @@ html {
 }
 
 h2 {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 25px;
+  font-family: var(--secondary-font);
 }
 
 h3 {
@@ -221,12 +231,6 @@ h3 {
 
 .price-box p {
   letter-spacing: 1px;
-}
-
-.form-group label {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 16px;
 }
 
 .modal {
@@ -439,7 +443,6 @@ h3 {
   border: none;
   outline: none;
   box-shadow: 4px 2px 10px 2px #4e6945;
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -449,14 +452,17 @@ h3 {
 }
 
 .newsletter-text button {
-  margin-top: 10px;
-  width: 170px;
-  height: 33px;
-  background-color: #99c48a;
+  margin-top: 20px;
+  width: 100%;
+  height: 35px;
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
   outline: none;
   border: 1px solid #b4b4b4;
   transition: all 0.2s;
   letter-spacing: 1px;
+  align-self: flex-start;
+  font-size: 14px;
 }
 
 .newsletter-text {
@@ -473,11 +479,9 @@ h3 {
   min-width: 400px;
 }
 
-h2,
-p {
-  text-align: center;
-  padding-bottom: 10px;
-  color: var(--main-color);
+.newsletter-text p {
+  font-size: 16px;
+  padding-top: 2em;
 }
 
 .newsletter-text form {
@@ -551,20 +555,6 @@ section .column {
   margin-right: 10px;
 }
 
-#mobile-search-form {
-  max-height: 0;
-  overflow: hidden;
-  display: none;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-  padding-left: 5em !important;
-  padding-right: 5em !important;
-}
-
-.mobile-searchbar input {
-  box-shadow: 0 4px 8px rgba(185, 27, 27, 0.1);
-}
-
 form button {
   opacity: 1;
   width: 40px;
@@ -573,20 +563,6 @@ form button {
   background-color: #3b413d;
   color: #99c48a;
   border: 20px;
-}
-
-form .mobile-searchbar input {
-  width: 95%;
-  height: 2rem;
-  padding-left: 0.7rem;
-  outline: none;
-  border: none;
-  background-color: #3b413d;
-  color: #fcfafa;
-}
-
-.bijeli-placeholder::placeholder {
-  color: white;
 }
 
 @media (max-width: 768px) {
@@ -616,59 +592,6 @@ form .mobile-searchbar input {
   .column h1 {
     color: #99c48a;
   }
-}
-
-@media (max-width: 580px) {
-  #mobile-search-form {
-    padding: 1em;
-    display: block;
-    transform: translateY(-2px);
-    opacity: 1;
-    max-height: 50px;
-  }
-
-  .search-bar {
-    display: none;
-  }
-
-  .mobile-icons {
-    display: contents;
-    align-items: center;
-    opacity: 1;
-    color: #fffdfd;
-    float: right;
-    background-color: #2c312f;
-    height: auto;
-    width: auto;
-  }
-
-  .mobile-icons .icon-container {
-    font-size: 16px;
-  }
-}
-
-form .mobile-searchbar input:focus {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.mobile-icons {
-  opacity: 1;
-}
-
-.cart-count {
-  position: absolute;
-  top: 1px;
-  right: 85px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  padding: 5px;
 }
 
 .breadcrump h3 {

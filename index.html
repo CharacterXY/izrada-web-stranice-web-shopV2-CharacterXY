@@ -3,32 +3,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link rel="stylesheet" href="css/styles.css" class="" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-  </head>
-
-
-
-
-  <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>OUTDOOR BIKE SHOP</title>
+      <title>OUTDOOR BIKE SHOP</title>
       </head>
       <body>
+       
 
-      <header>
-        <iframe src="partials/header.html" width="100%" height="130" class="auto-height-iframe" frameborder="0" scrolling="no"></iframe>
-      </header>
+      <div id="header-container"></div>
+   
        
 
 
@@ -38,7 +24,7 @@
       <img
         src="images/bc31ca3d345b8381dcd3281bfe63ac8f-e1616770888162.jpg"
         alt="" class="cover__img"
-      />
+      /> 
     </div>
     <div class="text-box">
       <h1 class="heading-primary">
@@ -53,7 +39,6 @@
     <!---------------------------------- NEWSLETTER ------------------------------------------------------------>
 
     <section class="newsletter-page">
-
       <div class="newsletter-image">
         <img
           src="images/newsletter.png"
@@ -70,11 +55,9 @@
         <form method="GET">
           <div class="newsletter-form">
             <input type="text" placeholder="Vaše ime" /><br>
-            <input type="text" placeholder="Vaša email adresa" /><br>
+            <input type="text" placeholder="Vaša email adresa" />
    
-            <button class="btn btn-background">Prijavi se</button>
-
-              <div class="newsletter-checkbox"><br>
+              <div class="newsletter-checkbox">
                 <p>
                   <input type="checkbox" />
                   Suglasan sam s korištenjem danih podataka u svrhu primanja
@@ -83,6 +66,7 @@
                 </p>
 
               </div>
+              <button class="btn btn-background">Prijavi se</button>
           </div>
 
           </div>
@@ -115,26 +99,32 @@
 
 
 
-
-      <footer>
-        <iframe src="partials/footer.html" width="100%" class="auto-height-iframe" frameborder="0"></iframe>
-      </footer>
-    
-
+      <div id="footer-container"></div>
+   
   </body>
+</html>
 
 
-  <script>
+
+<script>
     const searchIcon = document.getElementById("mobile-search-icon");
     const searchForm = document.getElementById("mobile-search-form");
 
-    searchIcon.addEventListener("click", function() {
-      searchForm.submit();
+  document.addEventListener("DOMContentLoaded", function () {
+  fetchHeaderAndFooter();
 
-    });
-  </script>
+    async function fetchHeaderAndFooter() {
+    const header = await fetch('partials/header.html');
+    const footer = await fetch('partials/footer.html');
 
-  <script src="javascript.js">
+    if (header.ok && footer.ok) {
+      document.getElementById('header-container').innerHTML = await header.text();
+      document.getElementById('footer-container').innerHTML = await footer.text();
+    } else {
+      console.error('Failed to load header or footer');
+    }
+  }
+});
 
-  </script>
-</html>
+</script>
+

@@ -1,0 +1,47 @@
+<div class="container">
+  <aside class="sidebar">
+    <form action="" method="GET">
+      <h3>Brends :</h3>
+      <br />
+      <hr />
+      <div class="form-group">
+        <input type="checkbox" id="brand1" name="brand1" value="Trek" />
+        <label for="brand1">Trek</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="brand2" name="brand2" value="Giant" />
+        <label for="brand2">Gaint</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="brand3" name="brand3" value="Norco" />
+        <label for="brand2">Norco</label>
+      </div>
+      <br />
+      <h3>Price:</h3>
+      <br />
+      <hr />
+      <br />
+      <div class="price-box">
+        <p>Please select your price:</p>
+        <br />
+        <input type="radio" id="price1" name="price" value="100" />
+        <label for="price1">0 - 100 € </label><br />
+        <input type="radio" id="price2" name="price" value="500" />
+        <label for="price2">0 - 500 €</label><br />
+        <input type="radio" id="price3" name="price" value="1000" />
+        <label for="price3">0 - 1000 €</label><br />
+        <input
+          type="range"
+          id="price"
+          name="price"
+          min="100"
+          max="5000"
+          value="0"
+          step="10"
+        /><br /><br />
+
+        <p>Value: <output id="value"></output> €</p>
+      </div>
+    </form>
+  </aside>
+</div>

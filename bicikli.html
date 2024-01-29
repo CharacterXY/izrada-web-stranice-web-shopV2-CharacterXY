@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" class="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>OUTDOOR BIKE SHOP</title>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div id="aside-container"></div>
+
+    <div id="footer-container"></div>
+  </body>
+
+  <script>
+    const searchIcon = document.getElementById("mobile-search-icon");
+    const searchForm = document.getElementById("mobile-search-form");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      fetchHeaderAndFooter();
+
+      async function fetchHeaderAndFooter() {
+        const header = await fetch("partials/header.html");
+        const footer = await fetch("partials/footer.html");
+        const aside = await fetch("partials/aside.html");
+
+        if (header.ok && footer.ok) {
+          document.getElementById("header-container").innerHTML =
+            await header.text();
+          document.getElementById("footer-container").innerHTML =
+            await footer.text();
+          document.getElementById("aside-container").innerHTML =
+            await aside.text();
+        } else {
+          console.error("Failed to load header or footer");
+        }
+      }
+    });
+  </script>
+</html>
