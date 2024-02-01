@@ -36,8 +36,9 @@
     padding: 0 9%;
     align-items: center;
     height: 50px;
-    background-color: var(--background-secondary);
+    background-color: white;
     justify-content: space-between;
+    box-shadow: var(--box-shadow);
   }
 
   &__logo img {
@@ -92,15 +93,19 @@ nav {
   opacity: 0;
   width: 100vw;
   height: 7vh;
-  background-color: var(--background-secondary);
+  background-color: white;
   z-index: 9999;
   font-family: var(--seondary-font);
+  box-shadow: var(--box-shadow);
 
   &:target {
     visibility: visible;
     opacity: 1;
   }
 
+  .search input:focus {
+    border: 2px solid var(--background-primary);
+  }
   .close-button {
     margin-right: 1em;
   }
@@ -264,8 +269,7 @@ span {
 
   .phone-data,
   .email-data {
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 14px;
   }
 
   .header__web-icons {
@@ -278,8 +282,9 @@ span {
   }
 
   .hamburger-menu {
-    width: 100vw;
-    left: 50%;
+    position: absolute;
+    width: 60vw !important;
+    left: 40% !important; // NEZNAN DRUGCIJE NAMISTIT DA NA OVOJ REZOLUCIJI RASIRI MENU RADI PROSTORA S SADRZAJEM (KATEGORIJE I SL.).
   }
 
   .hamburger-menu-list ul li {
@@ -355,7 +360,7 @@ span {
 
 .hamburger-menu-list ul li {
   padding-bottom: 10px;
-  background-color: var(--text-secondary);
+  background-color: white;
   margin-bottom: 1px;
   padding-top: 3%;
   padding-left: 3%;
@@ -364,6 +369,7 @@ span {
   font-size: 16px;
   font-family: var(--main-font);
   position: relative;
+  cursor: pointer;
 }
 
 .hamburger-menu-list i {
@@ -373,10 +379,11 @@ span {
   color: var(--text-primary);
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 
   &:hover {
     color: var(--background-primary);
-    transform: translateX(5px);
+    transform: translate(7px);
   }
 }
 

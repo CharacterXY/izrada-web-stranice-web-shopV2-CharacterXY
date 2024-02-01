@@ -3,16 +3,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
+  <style>
+    .kontakt-cover {
+      margin-top: 10rem;
+      background-image: url("images/kontakt1-cover.png");
+      width: 100%;
+      height: 70%;
+      background-position: center;
+      background-attachment: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+    }
+
+    .kontakt-cover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(
+        83,
+        85,
+        83,
+        0.8
+      ); /* Adjust the color and transparency here */
+    }
+
+    .kontakt-forma-container {
+      position: absolute;
+      top: 22%;
+      right: 5%;
+      background-color: white;
+      width: 700px;
+      height: 385px;
+      box-shadow: var(--box-shadow);
+      opacity: 0.9;
+    }
+
+    .kontakt-forma {
+      padding-left: 3em;
+    }
+
+    .kontakt-forma-container h2 {
+      padding-top: 0.7em;
+      padding-left: 0.7em;
+      padding-bottom: 0.7em;
+      color: var(--background-secondary);
+      font-family: var(--secondary-font);
+      text-align: start;
+      margin-bottom: 10px;
+      background-color: #333;
+      font-size: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--background-primary);
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 90%;
+      padding: 6px;
+      border: 1px solid #a7a7a7;
+      font-family: var(--secondary-font);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border: 2px solid rgb(82, 150, 82);
+      font-family: var(--primary-font);
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      margin-bottom: 1em;
+    }
+
+    .btn {
+      width: 180px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .kontakt-forma-container {
+        width: 370px !important;
+        height: 390px !important;
+        left: 10%;
+        top: 25%;
+      }
+    }
+  </style>
   <body>
-    <div class="kontakt">
-      <form class="kontakt kontakt__form">
-        <h2>KOTAKT</h2>
+    <!----- HEADER-------->
+    <div id="header-container"></div>
+    <!------------------------------->
+
+    <div class="kontakt-cover"></div>
+
+    <div class="kontakt-forma-container">
+      <h2>Kontaktirajte nas</h2>
+
+      <form method="GET" class="kontakt-forma">
         <div class="form-group">
-          <label for="name">Vaše Ime:</label>
-          <input type="text" />
+          <label for="ime">Vaše Ime</label>
+          <input type="text" id="ime" name="ime" required />
         </div>
+
+        <div class="form-group">
+          <label for="email">Vaš Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="poruka">Vaša Poruka</label>
+          <textarea id="poruka" name="poruka" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-background">Pošalji Poruku</button>
       </form>
     </div>
+
+    <!-------DINAMICKI SE UCITAVA FOOTER------->
+    <div id="footer-container"></div>
   </body>
 </html>
+
+<script>
+  const searchIcon = document.getElementById("mobile-search-icon");
+  const searchForm = document.getElementById("mobile-search-form");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    fetchHeaderAndFooter();
+
+    async function fetchHeaderAndFooter() {
+      const header = await fetch("partials/header.html");
+      const footer = await fetch("partials/footer.html");
+
+      if (header.ok && footer.ok) {
+        document.getElementById("header-container").innerHTML =
+          await header.text();
+
+        document.getElementById("footer-container").innerHTML =
+          await footer.text();
+      } else {
+        console.error("Failed to load header or footer");
+      }
+    }
+  });
+</script>
