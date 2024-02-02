@@ -6,6 +6,8 @@
 @import "base";
 @import "card-modal";
 @import "aside";
+@import "contact";
+@import "bicikli";
 
 *,
 *::after,
@@ -191,12 +193,6 @@ html::-webkit-scrollbar-track {
   align-self: center;
   align-items: center;
   padding: 2rem;
-}
-
-.sidebar {
-  width: 400px;
-  min-height: 100%;
-  padding: 10px;
 }
 
 .filters {

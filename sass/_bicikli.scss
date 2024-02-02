@@ -1,0 +1,67 @@
+.container-wrapper {
+  display: flex;
+  height: auto;
+  margin-top: 12rem;
+}
+
+.card-container {
+  width: 70vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.product-card {
+  width: calc(33.333% - 40px);
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+  width: 70%;
+}
+
+.card-container-header {
+  margin-bottom: 20px; /* Dodaje prostor ispod teksta */
+  padding: 2em;
+
+  & h2 {
+    text-align: start;
+    padding-bottom: 1em;
+    font-family: var(--secondary-font);
+  }
+
+  & p {
+    font-size: 14px;
+    font-family: var(--main-font);
+    text-align: justify;
+    padding-right: 70px;
+  }
+}
+
+/* Dodavanje stilova za drop-down kupnja po kriterijima */
+select {
+  padding: 7px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.filter-label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
+}
+
+.sale-only {
+  display: inline-block;
+  margin: 0px 0;
+  padding-left: 3em;
+  font-size: 14px;
+  color: red;
+}

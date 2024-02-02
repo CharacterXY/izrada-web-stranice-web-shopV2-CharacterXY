@@ -11,36 +11,308 @@
     <title>OUTDOOR BIKE SHOP</title>
   </head>
   <body>
+    <!----------------------------- OVDJE SE UCITAVA HEADER DINAMICKI KROZ JS ------------------------------>
     <div id="header-container"></div>
 
-    <div id="aside-container"></div>
+    <!------------------------------ OVDJE SE UCITAVA ASIDE DINAMICKI -------------------------------------->
+    <div class="bicikli-options">
+      <input type="text" />
+      <h2>iuoasdhouiash</h2>
+    </div>
+    <div class="container-wrapper">
+      <!-- UCITAVAM KONTENJER ASIDE -->
+      <div id="aside-container"></div>
 
+      <div class="main-content">
+        <div class="card-container-header">
+          <h2>Bicikli po odlicnim cijenama</h2>
+
+          <p>
+            Trek bicikli po odličnim cijenama Trek je tvrtka koja se
+            proizvodnjom bicikala bavi izuzetno dugo, od 1976. godine. Osnovana
+            je na području Sjedinjenih Američkih Država i od tad žele isporučiti
+            samo najbolje modele bicikala svojim korisnicima. Posebno su
+            posvećeni ekološkoj održivosti na koju žele utjecati i putem svojih
+            električnih modela bicikala. Izbor Trek modela izrazito je velik,
+            bez obzira želite li cestovni ili brdski bicikl, ili pak nešto
+            između poput trekking bicikla, oni proizvode sve! Jedan je od
+            najpoznatijih brendova na tržištu i izuzetno rasprostranjen i kod
+            nas, što najviše govori o kvaliteti bicikala koje proizvode.
+            Natjecatelji su također prepoznali kvalitetu njihovih bicikala, pa
+            su upravo na njima osvajane i brojne titule u cestovnom i brdskom
+            biciklizmu. Istražite ponudu Trek bicikala putem našeg Web shopa i
+            odaberite bicikle provjerene kvalitete!
+          </p>
+          <!--- OVO JE ISPOD TEKSTA OPCIJA ZA FILTRIRANJE BICIKLA-->
+          <label class="filter-label" for="search-criteria"
+            >Odaberite kriterij za pretragu</label
+          >
+          <select id="search-criteria" name="criteria">
+            <option value="option1">Najnoviji</option>
+            <option value="option1">Cijena: manja prema većoj</option>
+            <option value="option2">Cijena: veća prema manjoj</option>
+            <option value="option3">Popust: veći prema manjem</option>
+            <option value="option4">Popust: manji prema većem</option>
+          </select>
+
+          <!----------- Checkbox za proizvode na akciji ------------->
+        </div>
+        <div class="card-container">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
+                alt="Product Image"
+              />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Trek Fuel Ex-8</div>
+              <div class="product-price">2899.99 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/fuel-ex-8(1).webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Lanac Shimano CN-HG601</div>
+              <div class="product-price">36.99 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/fuel-ex-9-7-gen-6-2023-crimson-35843-16710499036144-o.webp"
+                alt="Product Image"
+              />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Lanac Shimano CN-HG601</div>
+              <div class="product-price">36.99 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/norco-bike.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Lanac Shimano CN-HG601</div>
+              <div class="product-price">36.99 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/norco-shore.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Norco Shore</div>
+              <div class="product-price">6.499 €</div>
+              <div class="product-description">
+                A 27.5″ aluminum frame full suspension enduro bike with high-end
+                components.
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/trek-roscoe.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Trek Roscoe</div>
+              <div class="product-price">1.299,86 €</div>
+              <div class="product-description">
+                A 27.5″ aluminum frame full suspension enduro bike with high-end
+                components.
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL WINDOWS FOR DETAILS OF PRODUCTS -->
+    <div id="modal-box" class="modal">
+      <div class="modal-content">
+        <div class="modal-left">
+          <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
+          <!-- u buducnosti ce se prikazivati dinamicki model iz baze podataka-->
+          <img
+            src="../images/fuel-ex-8.webp"
+            alt="Main Prodcut Image"
+            class="modal-main-image"
+          />
+
+          <div class="modal-image-gallery">
+            <img src="../images/fuel-ex-8(1).webp" alt="fulex-ex-8" />
+            <img src="../images/fuel-ex-8(2).webp" alt="fulex-ex-8" />
+            <img src="../images/fuel-ex-8(3).webp" alt="fulex-ex-8" />
+          </div>
+          <p>
+            * Podaci navedeni na ovoj stranici su informativne prirode i nisu
+            obvezujući. Slike ne moraju odgovarati točno proizvodu na stranici,
+            svi podaci su podložni promjeni bez prethodne najave.
+          </p>
+        </div>
+
+        <div class="modal-right">
+          <h3 class="modal-product-title">
+            TREK Fuel EXe 8.0 2023 Matte Pennyflake
+            <span class="modal-star-rating"> ★★★★☆</span> (0)
+          </h3>
+          <div class="modal-product-price"><strong>Price:</strong> 2100 €</div>
+
+          <div class="modal-availability">
+            <span><i class="fa-solid fa-warehouse"></i></span> Availability: U
+            WEBSHOPU
+          </div>
+          <div class="modal-prodcut-code">Product Code: 90622-5056</div>
+          <div class="modal-product-size">
+            <h3>Velicina</h3>
+            <p>Odaberi velicinu</p>
+            <br />
+            <button class="velicina-bicikle"><a href="">S-27.5"</a></button>
+            <button class="velicina-bicikle"><a href="">XS-27.5"</a></button>
+            <button class="velicina-bicikle"><a href="">S</a></button>
+            <button class="velicina-bicikle"><a href="">M</a></button>
+            <button class="velicina-bicikle"><a href="">M/L</a></button>
+            <button class="velicina-bicikle"><a href="">L</a></button>
+            <button class="velicina-bicikle"><a href="">XL</a></button>
+          </div>
+
+          <div class="quantity-selector">
+            <button class="quantity-btn" id="decrement">-</button>
+            <input
+              id="quantity-input"
+              class="quantity-input"
+              value="1"
+              min="1"
+            />
+            <button class="quantity-btn" id="increase">+</button>
+          </div>
+
+          <button class="btn btn-background" id="btn-modal">
+            <i class="fas fa-shopping-cart"></i> Dodaj u košaricu
+          </button>
+        </div>
+
+        <a href="#" class="modal-close">&times;</a>
+      </div>
+    </div>
+
+    <!------------------------------ OVDJE SE UCITAVA FOOTER DINAMICKI ------------------------------------->
     <div id="footer-container"></div>
   </body>
-
-  <script>
-    const searchIcon = document.getElementById("mobile-search-icon");
-    const searchForm = document.getElementById("mobile-search-form");
-
-    document.addEventListener("DOMContentLoaded", function () {
-      fetchHeaderAndFooter();
-
-      async function fetchHeaderAndFooter() {
-        const header = await fetch("partials/header.html");
-        const footer = await fetch("partials/footer.html");
-        const aside = await fetch("partials/aside.html");
-
-        if (header.ok && footer.ok) {
-          document.getElementById("header-container").innerHTML =
-            await header.text();
-          document.getElementById("footer-container").innerHTML =
-            await footer.text();
-          document.getElementById("aside-container").innerHTML =
-            await aside.text();
-        } else {
-          console.error("Failed to load header or footer");
-        }
-      }
-    });
-  </script>
 </html>
+
+<script>
+  const value = document.querySelector("#value");
+  const input = document.querySelector("#price");
+  value.textContent = input.value;
+  input.addEventListener("input", (event) => {
+    value.textContent = event.target.value;
+  });
+
+  document.getElementById("increase").addEventListener("click", function () {
+    var quantityInput = document.getElementById("quantity-input");
+    var currentValue = parseInt(quantityInput.value, 10);
+    quantityInput.value = currentValue + 1;
+  });
+
+  document.getElementById("decrement").addEventListener("click", function () {
+    var quantityInput = document.getElementById("quantity-input");
+    var currentValue = parseInt(quantityInput.value, 10);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+</script>
+
+<script>
+  const searchIcon = document.getElementById("mobile-search-icon");
+  const searchForm = document.getElementById("mobile-search-form");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    fetchHeaderAndFooter();
+
+    async function fetchHeaderAndFooter() {
+      const header = await fetch("partials/header.html");
+      const footer = await fetch("partials/footer.html");
+      const aside = await fetch("partials/aside.html");
+
+      if (header.ok && footer.ok) {
+        document.getElementById("header-container").innerHTML =
+          await header.text();
+        document.getElementById("footer-container").innerHTML =
+          await footer.text();
+        document.getElementById("aside-container").innerHTML =
+          await aside.text();
+      } else {
+        console.error("Failed to load header or footer");
+      }
+    }
+  });
+</script>
+
+<script></script>
