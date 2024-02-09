@@ -7,12 +7,22 @@
 }
 
 .sidebar {
-  width: 20vw;
+  width: 16vw;
   height: 100vh;
   padding: 20px;
   font-size: 16px;
 
   & h3 {
     font-weight: bold;
+  }
+
+  p {
+    padding-bottom: 0.3em;
+  }
+}
+
+@media (max-width: 770px) {
+  .sidebar {
+    display: none;
   }
 }

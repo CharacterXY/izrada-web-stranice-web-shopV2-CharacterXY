@@ -10,12 +10,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .product-card {
   width: calc(33.333% - 40px);
-  margin: 10px;
+  margin: 1rem;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -25,7 +25,7 @@
 }
 
 .card-container-header {
-  margin-bottom: 20px; /* Dodaje prostor ispod teksta */
+  margin-bottom: 2rem; /* Dodaje prostor ispod teksta */
   padding: 2em;
 
   & h2 {
@@ -35,33 +35,94 @@
   }
 
   & p {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: var(--main-font);
     text-align: justify;
-    padding-right: 70px;
+    padding-right: 0.7rem;
   }
 }
 
 /* Dodavanje stilova za drop-down kupnja po kriterijima */
 select {
-  padding: 7px;
+  padding: 0.7rem;
   margin-top: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
 }
 
 .filter-label {
   display: block;
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
   color: red;
 }
 
 .sale-only {
   display: inline-block;
-  margin: 0px 0;
   padding-left: 3em;
-  font-size: 14px;
+  font-size: 1rem;
   color: red;
+}
+
+.checkbox {
+  margin-left: 1rem;
+}
+
+.checkbox-text {
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(81, 101, 81);
+}
+
+@media (max-width: 1430px) {
+  .product-card {
+    width: calc(50% - 4rem);
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Skrivanje originalnog checkboxa */
+.custom-checkbox input[type="checkbox"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+.custom-checkbox {
+  font-size: 16px;
+  padding-left: 1em;
+}
+
+/* Stiliziranje labela koji će služiti kao prilagođeni checkbox */
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 24px; /* Velikost prilagođenog checkboxa */
+  height: 24px; /* Visina prilagođenog checkboxa */
+  background: #5d7661; /* Pozadina kad nije označen */
+  margin-right: 10px;
+  border-radius: 4px; /* Zaobljeni uglovi */
+  position: relative;
+  top: 5px; /* Poravnavanje s tekstom */
+}
+
+/* Kad je checkbox označen, prikaži crvenkastu i bijeli check */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #e66e59; /* bljedo crvena kad je aktivno */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
