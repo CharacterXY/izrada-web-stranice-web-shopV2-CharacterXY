@@ -31,6 +31,7 @@
   height: 100%;
   object-fit: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .product-info {
@@ -69,7 +70,7 @@
   font-size: 2rem;
   padding-top: 15px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .product-title {
@@ -135,4 +136,44 @@
 
 .product-info:hover a {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 3em;
+  }
+}
+
+@media (max-width: 1008px) {
+  .product-card .product-title,
+  .product-price,
+  .product-description {
+    font-size: 14px;
+  }
+
+  .bottom-card a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card .product-title,
+  .product-price,
+  .product-description {
+    font-size: 11px;
+  }
+
+  .bottom-card a {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 790px) {
+  .card-container-header {
+    margin-left: 3rem;
+    width: 100%;
+  }
 }

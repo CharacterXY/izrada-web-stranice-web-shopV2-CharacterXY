@@ -26,7 +26,7 @@
 
       <form method="GET" class="kontakt-forma">
         <div class="form-group-contact">
-          <label for="ime">Vaše Ime</label>
+          <label for="ime" id="name">Vaše Ime</label>
           <input type="text" id="ime" name="ime" required />
         </div>
 
@@ -36,7 +36,7 @@
         </div>
 
         <div class="form-group-contact">
-          <label for="poruka">Vaša Poruka</label>
+          <label for="poruka">Vaša Poruka:</label>
           <textarea id="poruka" name="poruka" rows="5"></textarea>
         </div>
 
@@ -71,5 +71,7 @@
         console.error("Failed to load header or footer");
       }
     }
+
+    document.getElementById("name");
   });
 </script>

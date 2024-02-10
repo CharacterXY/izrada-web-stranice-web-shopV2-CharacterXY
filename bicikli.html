@@ -61,17 +61,14 @@
         <div class="card-container">
           <div class="product-card">
             <div class="product-image">
-              <img
-                src="images/fuel-ex-7-2022-black-red-29979-0-16620690513769-o.webp"
-                alt="Product Image"
-              />
+              <img src="images/trek_rail9.8.webp" alt="Product Image" />
             </div>
             <div class="product-info product-info-background">
-              <div class="product-title">Trek Fuel Ex-8</div>
+              <div class="product-title">Trek Fuel Rail 9.8 XT Gen 4</div>
               <div class="product-price">2899.99 €</div>
               <div class="product-description">
-                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
-                / E-BIKE)
+                If you want to ride it, chances are Fuel EX can rip it. This
+                bike’s always ready for more.
               </div>
               <div class="bottom-card">
                 <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
@@ -87,12 +84,9 @@
               <img src="images/fuel-ex-8(1).webp" alt="Product Image" />
             </div>
             <div class="product-info product-info-background">
-              <div class="product-title">Lanac Shimano CN-HG601</div>
-              <div class="product-price">36.99 €</div>
-              <div class="product-description">
-                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
-                / E-BIKE)
-              </div>
+              <div class="product-title">Trek Fuel Ex-9</div>
+              <div class="product-price">3668.99 €</div>
+              <div class="product-description">New TREK BIKE, 4ALL</div>
               <div class="bottom-card">
                 <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
 
@@ -106,13 +100,13 @@
           <div class="product-card">
             <div class="product-image">
               <img
-                src="images/fuel-ex-9-7-gen-6-2023-crimson-35843-16710499036144-o.webp"
+                src="images/SupercaliberSLR99XOAXS-24-41728-A-Alt1_2048x.webp"
                 alt="Product Image"
               />
             </div>
             <div class="product-info product-info-background">
-              <div class="product-title">Lanac Shimano CN-HG601</div>
-              <div class="product-price">36.99 €</div>
+              <div class="product-title">Supercailber SLR 9.9 XO AXS Gen 2</div>
+              <div class="product-price">4992.00 €</div>
               <div class="product-description">
                 SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
                 / E-BIKE)
@@ -132,8 +126,8 @@
               <img src="images/norco-bike.webp" alt="Product Image" />
             </div>
             <div class="product-info product-info-background">
-              <div class="product-title">Lanac Shimano CN-HG601</div>
-              <div class="product-price">36.99 €</div>
+              <div class="product-title">Norco 4ALL</div>
+              <div class="product-price">3336.99 €</div>
               <div class="product-description">
                 SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
                 / E-BIKE)
@@ -171,7 +165,10 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="images/trek-roscoe.webp" alt="Product Image" />
+              <img
+                src="images/ECal98XT_22_35768_A_Portrait.png"
+                alt="Product Image"
+              />
             </div>
             <div class="product-info product-info-background">
               <div class="product-title">Trek Roscoe</div>
@@ -200,7 +197,7 @@
           <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
           <!-- u buducnosti ce se prikazivati dinamicki model iz baze podataka-->
           <img
-            src="../images/fuel-ex-8.webp"
+            src="images/trek-rail.webp"
             alt="Main Prodcut Image"
             class="modal-main-image"
           />
@@ -268,27 +265,7 @@
 </html>
 
 <script>
-  const value = document.querySelector("#value");
-  const input = document.querySelector("#price");
-  value.textContent = input.value;
-  input.addEventListener("input", (event) => {
-    value.textContent = event.target.value;
-  });
-
-  document.getElementById("increase").addEventListener("click", function () {
-    alert("radi");
-    var quantityInput = document.getElementById("quantity-input");
-    var currentValue = parseInt(quantityInput.value, 10);
-    quantityInput.value = currentValue + 1;
-  });
-
-  document.getElementById("decrement").addEventListener("click", function () {
-    var quantityInput = document.getElementById("quantity-input");
-    var currentValue = parseInt(quantityInput.value, 10);
-    if (currentValue > 1) {
-      quantityInput.value = currentValue - 1;
-    }
-  });
+  document.addEventListener("DOMContentLoaded", function () {});
 </script>
 
 <script>
@@ -313,6 +290,32 @@
       } else {
         console.error("Failed to load header or footer");
       }
+
+      const value = document.querySelector("#value");
+      const input = document.querySelector("#price");
+      value.textContent = input.value;
+      input.addEventListener("input", (event) => {
+        value.textContent = event.target.value;
+      });
+
+      document
+        .getElementById("increase")
+        .addEventListener("click", function () {
+          alert("radi");
+          var quantityInput = document.getElementById("quantity-input");
+          var currentValue = parseInt(quantityInput.value, 10);
+          quantityInput.value = currentValue + 1;
+        });
+
+      document
+        .getElementById("decrement")
+        .addEventListener("click", function () {
+          var quantityInput = document.getElementById("quantity-input");
+          var currentValue = parseInt(quantityInput.value, 10);
+          if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+          }
+        });
     }
   });
 </script>

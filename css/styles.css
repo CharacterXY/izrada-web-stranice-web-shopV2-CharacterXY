@@ -32,6 +32,7 @@
   height: 100%;
   object-fit: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .product-info {
@@ -70,7 +71,7 @@
   font-size: 2rem;
   padding-top: 15px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .product-title {
@@ -140,6 +141,40 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .card-container {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 3em;
+  }
+}
+@media (max-width: 1008px) {
+  .product-card .product-title,
+  .product-price,
+  .product-description {
+    font-size: 14px;
+  }
+  .bottom-card a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .product-card .product-title,
+  .product-price,
+  .product-description {
+    font-size: 11px;
+  }
+  .bottom-card a {
+    font-size: 9px;
+  }
+}
+@media (max-width: 790px) {
+  .card-container-header {
+    margin-left: 3rem;
+    width: 100%;
+  }
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -276,7 +311,8 @@ footer {
   cursor: pointer;
 }
 .header__web-icons i {
-  font-size: 10px;
+  font-size: 20px;
+  height: auto;
 }
 .header__bottom-row {
   display: flex;
@@ -336,7 +372,7 @@ nav ul li a {
   background-color: white;
   z-index: 9999;
   font-family: var(--seondary-font);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .search:target {
   visibility: visible;
@@ -610,6 +646,65 @@ span {
   transform: translateY(-3px);
 }
 
+.navigation-desktop {
+  height: 100%;
+}
+
+.navigation-desktop ul {
+  display: flex;
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.navigation-desktop ul li {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.navigation-desktop ul li:hover a {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navigation-desktop.navigation-desktop-background ul li {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.navigation-desktop.navigation-desktop-background ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  background-color: var(--background-primary);
+  transform: scaleY(0);
+  transition: transform 0.5s ease;
+  transform-origin: top;
+}
+
+.navigation-desktop.navigation-desktop-background ul li:hover::before,
+.navigation-desktop.navigation-desktop-background ul li:focus::before {
+  transform: scaleY(1);
+}
+
 *,
 *::after,
 *::before {
@@ -755,10 +850,10 @@ body {
   top: 22%;
   right: 5%;
   background-color: white;
-  width: 700px;
-  height: 385px;
+  width: 400px;
+  height: 47%;
   box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
-  opacity: 0.9;
+  opacity: 1;
   transition: all 0.3s linear;
 }
 .kontakt-forma-container h2 {
@@ -770,14 +865,14 @@ body {
   text-align: start;
   margin-bottom: 10px;
   background-color: #333;
-  font-size: 18px;
+  font-size: 17px;
 }
 .kontakt-forma-container:hover {
   transform: translateY(-2px);
 }
 .kontakt-forma p {
   padding-bottom: 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .form-group-contact label {
@@ -786,6 +881,12 @@ body {
   color: var(--background-primary);
   font-weight: 600;
   font-size: 12px;
+  transition: all 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.form-group-contact:focus-within label {
+  font-size: 14px;
+  font-weight: bold;
+  transform: scaleX(1.1);
 }
 .form-group-contact input, .form-group-contact textarea {
   width: 90%;
@@ -808,8 +909,8 @@ body {
 
 @media (max-width: 900px) {
   .kontakt-forma-container {
-    width: 370px !important;
-    height: 390px !important;
+    width: 230px !important;
+    height: 430px !important;
     left: 10%;
     top: 25%;
   }
@@ -1510,6 +1611,7 @@ section h1 {
   box-shadow: 0px 0px 10px 5px rgba(100, 129, 103, 0.75);
   font-size: 14px;
   background-color: var(--background-primary);
+  color: white;
 }
 
 form button {
