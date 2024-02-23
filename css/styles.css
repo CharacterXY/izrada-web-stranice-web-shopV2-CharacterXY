@@ -334,13 +334,19 @@ footer {
 nav {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 nav ul {
   display: flex;
   list-style: none;
+  height: 100%;
 }
 nav ul li {
   margin-right: 2px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav ul li a {
   text-decoration: none;
@@ -353,6 +359,8 @@ nav ul li a {
   font-style: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding-right: 5px;
+  margin-right: 2px;
 }
 
 .search {
@@ -1064,6 +1072,98 @@ input[type=checkbox] {
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+}
+
+@media (max-width: 770px) {
+  .breadcrump {
+    margin-left: 30px;
+  }
+  label {
+    font-size: 10px !important;
+  }
+  .filter-menu {
+    display: block !important;
+  }
+}
+.breadcrump {
+  display: flex;
+  font-size: 16px;
+  padding-left: 24px;
+}
+.breadcrump a:last-of-type {
+  text-decoration: none;
+  font-family: var(--main-font);
+  color: var(--color-primary);
+}
+
+.filter-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #739b73;
+  z-index: 9999;
+}
+
+.filter-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter-heading {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.filter-heading h2 {
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+
+.filter-body {
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.filter-close {
+  color: red;
+  font-size: 25px;
+}
+
+.filter-divider {
+  border: none;
+  border-top: 1px solid #dfdcdc; /* Možete prilagoditi boju crte po potrebi */
+  margin-top: 10px; /* Prilagodite razmak između naslova i crte po potrebi */
+  margin-bottom: 20px; /* Prilagodite razmak između crte i ostalog sadržaja po potrebi */
+}
+
+.filter-category {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+}
+
+.fa-solid.fa-plus {
+  font-size: 14px;
+}
+
+.filter-menu {
+  display: none;
 }
 
 *,

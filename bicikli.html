@@ -8,22 +8,33 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>OUTDOOR BIKE SHOP</title>
+    <style>
+      .modal-heading {
+        border-bottom: 1px solid rgb(79, 79, 85);
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <!----------------------------- OVDJE SE UCITAVA HEADER DINAMICKI KROZ JS ------------------------------>
     <div id="header-container"></div>
 
-    <!------------------------------ OVDJE SE UCITAVA ASIDE DINAMICKI -------------------------------------->
-    <div class="bicikli-options">
-      <input type="text" />
-      <h2>iuoasdhouiash</h2>
-    </div>
+    <!----------------------------- OVDJE SE UCITAVA ASIDE DINAMICKI -------------------------------------->
+
     <div class="container-wrapper">
       <!-- UCITAVAM KONTENJER ASIDE -->
+
       <div id="aside-container"></div>
 
       <div class="main-content">
+        <div class="breadcrump">
+          <a href="index.html">HOME \ </a>
+          <a href=""> BICIKLI</a>
+        </div>
+
         <div class="card-container-header">
           <h2>Bicikli po odlicnim cijenama</h2>
 
@@ -39,6 +50,88 @@
             kvalitete!
           </p>
           <!--- OVO JE ISPOD TEKSTA OPCIJA ZA FILTRIRANJE BICIKLA-->
+          <div class="filter-menu">
+            <label class="filter-label" for="search-criteria"
+              >Filtriraj Pretragu</label
+            >
+            <br />
+            <a href="#filter-modal" id="filter-icon">
+              <img
+                src="images/icons8-filter.gif"
+                height="30px"
+                width="30px"
+                alt=""
+            /></a>
+          </div>
+
+          <!-- FILTER ICON MODAL-->
+
+          <div id="filter-modal" class="filter-modal">
+            <div class="filter-body">
+              <div class="filter-heading">
+                <h2>Filtriranje</h2>
+                <a href=""><span class="filter-close">&times;</span></a>
+              </div>
+
+              <div class="filter-category">
+                <h3>Kategorija</h3>
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+              <div class="filter-content">
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">MTB</label><br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">E-BIKE</label> <br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">Cestovni Bicikl</label><br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">Djecji Bicikl</label>
+              </div>
+
+              <div class="filter-category">
+                <h3>Brendovi</h3>
+
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Norco</label><br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Specilazied</label> <br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Giant</label><br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Santa Cruz</label> <br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Polygon</label>
+              <div class="filter-category">
+                <h3>Cijena</h3>
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+
+              <div class="price-box">
+                <p>Please select your price:</p>
+                <br />
+                <input type="radio" id="price1" name="price" value="100" />
+                <label for="price1">0 - 100 € </label><br />
+                <input type="radio" id="price2" name="price" value="500" />
+                <label for="price2">0 - 500 €</label><br />
+                <input type="radio" id="price3" name="price" value="1000" />
+                <label for="price3">0 - 1000 €</label><br />
+              </div>
+              <button type="submit" class="btn">Primjeni</button>
+            </div>
+          </div>
+
           <label class="filter-label" for="search-criteria"
             >Odaberite kriterij za pretragu</label
           >
@@ -319,5 +412,3 @@
     }
   });
 </script>
-
-<script></script>
