@@ -9,266 +9,334 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
+  <style></style>
   <body>
     <!--------------OVDJE SE UCITAVA HEADER DINAMCIKI PREKO JS-A ------------->
     <div id="header-container"></div>
 
-    <!--------------------------- SIDEBAR ------------------------------->
-    <div class="breadcrump">
-      <h3><a href="../index.html">Home</a> / <strong>Dijelovi</strong></h3>
+    <div class="container-wrapper">
+      <div id="aside-container"></div>
+
+      <div class="main-content">
+        <div class="breadcrump">
+          <a href="index.html">HOME \ </a>
+          <a href=""> BICIKLI</a>
+        </div>
+
+        <div class="card-container-header">
+          <h2>Bicikli po odlicnim cijenama</h2>
+
+          <p>
+            Izbor Trek modela izrazito je velik, bez obzira želite li cestovni
+            ili brdski bicikl, ili pak nešto između poput trekking bicikla, oni
+            proizvode sve! Jedan je od najpoznatijih brendova na tržištu i
+            izuzetno rasprostranjen i kod nas, što najviše govori o kvaliteti
+            bicikala koje proizvode. Natjecatelji su također prepoznali
+            kvalitetu njihovih bicikala, pa su upravo na njima osvajane i brojne
+            titule u cestovnom i brdskom biciklizmu. Istražite ponudu Trek
+            bicikala putem našeg Web shopa i odaberite bicikle provjerene
+            kvalitete!
+          </p>
+          <!--- OVO JE ISPOD TEKSTA OPCIJA ZA FILTRIRANJE BICIKLA-->
+          <div class="filter-menu">
+            <label class="filter-label" for="search-criteria"
+              >Filtriraj Pretragu</label
+            >
+            <br />
+            <a href="#filter-modal" id="filter-icon">
+              <img
+                src="images/icons8-filter.gif"
+                height="30px"
+                width="30px"
+                alt=""
+            /></a>
+          </div>
+
+          <!-- FILTER ICON MODAL-->
+
+          <div id="filter-modal" class="filter-modal">
+            <div class="filter-body">
+              <div class="filter-heading">
+                <h2>Filtriranje</h2>
+                <a href=""><span class="filter-close">&times;</span></a>
+              </div>
+
+              <div class="filter-category">
+                <h3>Kategorija</h3>
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+              <div class="filter-content">
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">MTB</label><br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">E-BIKE</label> <br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">Cestovni Bicikl</label><br />
+                <input type="checkbox" id="option1" name="option1" />
+                <label for="option1">Djecji Bicikl</label>
+              </div>
+
+              <div class="filter-category">
+                <h3>Brendovi</h3>
+
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Norco</label><br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Specilazied</label> <br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Giant</label><br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Santa Cruz</label> <br />
+              <input type="checkbox" id="option1" name="option1" />
+              <label for="option1">Polygon</label>
+              <div class="filter-category">
+                <h3>Cijena</h3>
+                <a href="" class="toggle-filter"
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+              </div>
+              <hr class="filter-divider" />
+
+              <div class="price-box">
+                <p>Please select your price:</p>
+                <br />
+                <input type="radio" id="price1" name="price" value="100" />
+                <label for="price1">0 - 100 € </label><br />
+                <input type="radio" id="price2" name="price" value="500" />
+                <label for="price2">0 - 500 €</label><br />
+                <input type="radio" id="price3" name="price" value="1000" />
+                <label for="price3">0 - 1000 €</label><br />
+              </div>
+              <button type="submit" class="btn">Primjeni</button>
+            </div>
+          </div>
+
+          <label class="filter-label" for="search-criteria"
+            >Odaberite kriterij za pretragu</label
+          >
+          <select id="search-criteria" name="criteria">
+            <option value="option1">Najnoviji</option>
+            <option value="option1">Cijena: manja prema većoj</option>
+            <option value="option2">Cijena: veća prema manjoj</option>
+            <option value="option3">Popust: veći prema manjem</option>
+            <option value="option4">Popust: manji prema većem</option>
+          </select>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" id="customCheckbox" name="customCheckbox" />
+            <span class="checkmark"></span>
+            Odaberi proizvode samo na akciji
+          </label>
+
+          <!----------- Checkbox za proizvode na akciji ------------->
+        </div>
+        <div class="card-container">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/trek_rail9.8.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Trek Fuel Rail 9.8 XT Gen 4</div>
+              <div class="product-price">2899.99 €</div>
+              <div class="product-description">
+                If you want to ride it, chances are Fuel EX can rip it. This
+                bike’s always ready for more.
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/fuel-ex-8(1).webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Trek Fuel Ex-9</div>
+              <div class="product-price">3668.99 €</div>
+              <div class="product-description">New TREK BIKE, 4ALL</div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/SupercaliberSLR99XOAXS-24-41728-A-Alt1_2048x.webp"
+                alt="Product Image"
+              />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Supercailber SLR 9.9 XO AXS Gen 2</div>
+              <div class="product-price">4992.00 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/norco-bike.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Norco 4ALL</div>
+              <div class="product-price">3336.99 €</div>
+              <div class="product-description">
+                SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB
+                / E-BIKE)
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/norco-shore.webp" alt="Product Image" />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Norco Shore</div>
+              <div class="product-price">6.499 €</div>
+              <div class="product-description">
+                A 27.5″ aluminum frame full suspension enduro bike with high-end
+                components.
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/ECal98XT_22_35768_A_Portrait.png"
+                alt="Product Image"
+              />
+            </div>
+            <div class="product-info product-info-background">
+              <div class="product-title">Trek Roscoe</div>
+              <div class="product-price">1.299,86 €</div>
+              <div class="product-description">
+                A 27.5″ aluminum frame full suspension enduro bike with high-end
+                components.
+              </div>
+              <div class="bottom-card">
+                <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
+
+                <a href="#modal-box"
+                  >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-      <aside class="sidebar">
-        <form action="" method="GET">
-          <div class="form-group">
-            <h3>Category</h3>
-            <hr />
+    <!--MODAL WINDOWS FOR DETAILS OF PRODUCTS -->
+    <div id="modal-box" class="modal">
+      <div class="modal-content">
+        <div class="modal-left">
+          <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
+          <!-- u buducnosti ce se prikazivati dinamicki model iz baze podataka-->
+          <img
+            src="images/trek-rail.webp"
+            alt="Main Prodcut Image"
+            class="modal-main-image"
+          />
+
+          <div class="modal-image-gallery">
+            <img src="../images/fuel-ex-8(1).webp" alt="fulex-ex-8" />
+            <img src="../images/fuel-ex-8(2).webp" alt="fulex-ex-8" />
+            <img src="../images/fuel-ex-8(3).webp" alt="fulex-ex-8" />
+          </div>
+          <p>
+            * Podaci navedeni na ovoj stranici su informativne prirode i nisu
+            obvezujući. Slike ne moraju odgovarati točno proizvodu na stranici,
+            svi podaci su podložni promjeni bez prethodne najave.
+          </p>
+        </div>
+
+        <div class="modal-right">
+          <h3 class="modal-product-title">
+            TREK Fuel EXe 8.0 2023 Matte Pennyflake
+            <span class="modal-star-rating"> ★★★★☆</span> (0)
+          </h3>
+          <div class="modal-product-price"><strong>Price:</strong> 2100 €</div>
+
+          <div class="modal-availability">
+            <span><i class="fa-solid fa-warehouse"></i></span> Availability: U
+            WEBSHOPU
+          </div>
+          <div class="modal-prodcut-code">Product Code: 90622-5056</div>
+          <div class="modal-product-size">
+            <h3>Velicina</h3>
+            <p>Odaberi velicinu</p>
             <br />
+            <button class="velicina-bicikle"><a href="">S-27.5"</a></button>
+            <button class="velicina-bicikle"><a href="">XS-27.5"</a></button>
+            <button class="velicina-bicikle"><a href="">S</a></button>
+            <button class="velicina-bicikle"><a href="">M</a></button>
+            <button class="velicina-bicikle"><a href="">M/L</a></button>
+            <button class="velicina-bicikle"><a href="">L</a></button>
+            <button class="velicina-bicikle"><a href="">XL</a></button>
           </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="kotaci" />
-            <label for="brand2">Kotaci</label>
-          </div>
-          <div class="form-group">
+
+          <div class="quantity-selector">
+            <button class="quantity-btn" id="decrement">-</button>
             <input
-              type="checkbox"
-              id="brand3"
-              name="brand3"
-              value="Lanci"
-              checked
+              id="quantity-input"
+              class="quantity-input"
+              value="1"
+              min="1"
             />
-            <label for="brand2">Lanci</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="Pedale" />
-            <label for="brand2">Pedale</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="mjenjaci" />
-            <label for="brand2">Mjenjaci</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="tubeless" />
-            <label for="brand2">Tubeless</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="vilice" />
-            <label for="brand2">Vilice</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="zracnice" />
-            <label for="brand2">Zracnice</label>
-          </div>
-          <div class="form-group">
-            <input
-              type="checkbox"
-              id="brand3"
-              name="brand3"
-              value="sajle_buziri"
-            />
-            <label for="brand2">Sajle i buziri</label>
-          </div>
-          <h3>Brends :</h3>
-          <br />
-          <hr />
-          <div class="form-group">
-            <input
-              type="checkbox"
-              id="brand1"
-              name="brand1"
-              value="Trek"
-              checked
-            />
-            <label for="brand1">Trek</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand2" name="brand2" value="Giant" />
-            <label for="brand2">Gaint</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="brand3" name="brand3" value="Norco" />
-            <label for="brand2">Norco</label>
+            <button class="quantity-btn" id="increase">+</button>
           </div>
 
-          <br />
-          <h3>Price:</h3>
-          <br />
-          <hr />
-          <br />
-          <div class="price-box">
-            <p>Please select your price:</p>
-            <br />
-            <input type="radio" id="price1" name="price" value="100" />
-            <label for="price1">0 - 100 € </label><br />
-            <input type="radio" id="price2" name="price" value="500" />
-            <label for="price2">0 - 500 €</label><br />
-            <input type="radio" id="price3" name="price" value="1000" />
-            <label for="price3">0 - 1000 €</label><br />
-            <input
-              type="range"
-              id="price"
-              name="price"
-              min="100"
-              max="5000"
-              value="0"
-              step="10"
-            /><br /><br />
-
-            <p>Value: <output id="value"></output> €</p>
-          </div>
-        </form>
-      </aside>
-
-      <div class="product-card">
-        <div class="product-image">
-          <img
-            src="images/lanac-shimano-cn-hg601-11-116cl-11brz-za-trkaci-mtb-e-bike--24455-0-16620686287292-o.webp"
-            alt="Product Image"
-          />
-        </div>
-        <div class="product-info product-info-background">
-          <div class="product-title">Lanac Shimano CN-HG601</div>
-          <div class="product-price">36.99 €</div>
-          <div class="product-description">
-            <p>
-              SHIMANO LANAC SHIMANO CN-HG601-11, 116ČL.11BRZ. (ZA TRKAĆI / MTB /
-              E-BIKE)
-            </p>
-          </div>
-          <div class="bottom-card">
-            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
-
-            <a href="#modal-box"
-              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <!--MODAL WINDOWS FOR DETAILS OF PRODUCTS -->
-      <div id="modal-box" class="modal">
-        <div class="modal-content">
-          <div class="modal-left">
-            <div class="modal-text">Model: TREK Fuel EX 8 2023</div>
-            <!-- u buducnosti ce se prikazivati dinamicki model iz baze podataka-->
-            <img
-              src="../images/fuel-ex-8.webp"
-              alt="Main Prodcut Image"
-              class="modal-main-image"
-            />
-
-            <div class="modal-image-gallery">
-              <img src="../images/fuel-ex-8(1).webp" alt="fulex-ex-8" />
-              <img src="../images/fuel-ex-8(2).webp" alt="fulex-ex-8" />
-              <img src="../images/fuel-ex-8(3).webp" alt="fulex-ex-8" />
-            </div>
-            <p>
-              * Podaci navedeni na ovoj stranici su informativne prirode i nisu
-              obvezujući. Slike ne moraju odgovarati točno proizvodu na
-              stranici, svi podaci su podložni promjeni bez prethodne najave.
-            </p>
-          </div>
-
-          <div class="modal-right">
-            <h3 class="modal-product-title">
-              TREK Fuel EXe 8.0 2023 Matte Pennyflake
-              <span class="modal-star-rating"> ★★★★☆</span> (0)
-            </h3>
-            <div class="modal-product-price">
-              <strong>Price:</strong> 2100 €
-            </div>
-
-            <div class="modal-availability">
-              <span><i class="fa-solid fa-warehouse"></i></span> Availability: U
-              WEBSHOPU
-            </div>
-            <div class="modal-prodcut-code">Product Code: 90622-5056</div>
-            <div class="modal-product-size">
-              <h3>Velicina</h3>
-              <p>Odaberi velicinu</p>
-              <br />
-              <button class="velicina-bicikle"><a href="">S-27.5"</a></button>
-              <button class="velicina-bicikle"><a href="">XS-27.5"</a></button>
-              <button class="velicina-bicikle"><a href="">S</a></button>
-              <button class="velicina-bicikle"><a href="">M</a></button>
-              <button class="velicina-bicikle"><a href="">M/L</a></button>
-              <button class="velicina-bicikle"><a href="">L</a></button>
-              <button class="velicina-bicikle"><a href="">XL</a></button>
-            </div>
-
-            <div class="quantity-selector">
-              <button class="quantity-btn" id="decrement">-</button>
-              <input
-                id="quantity-input"
-                class="quantity-input"
-                value="1"
-                min="1"
-              />
-              <button class="quantity-btn" id="increase">+</button>
-            </div>
-
-            <button class="btn btn-background" id="btn-modal">
-              <i class="fas fa-shopping-cart"></i> Dodaj u košaricu
-            </button>
-          </div>
-
-          <a href="#" class="modal-close">&times;</a>
-        </div>
-      </div>
-
-      <!--DRUGI PRODUCT DODAN HTML-->
-
-      <div class="product-card">
-        <div class="product-image">
-          <img
-            src="images/mjenjac-zadnji-shimano-deore-rd-t6000-sgs-10-brzina-shadow-direct-attachment-37632-17025481928613-o.webp"
-            alt="Product Image"
-          />
+          <button class="btn btn-background" id="btn-modal">
+            <i class="fas fa-shopping-cart"></i> Dodaj u košaricu
+          </button>
         </div>
 
-        <div class="product-info product-info-background">
-          <div class="product-title">SHIMANO DEORE RD-T6000</div>
-
-          <div class="product-price">€190.99</div>
-
-          <div class="product-description">
-            SHIMANO MJENJAČ ZADNJI SHIMANO DEORE RD-T6000-SGS,10 BRZINA,SHADOW,
-            DIRECT ATTACHMENT
-          </div>
-          <div class="bottom-card">
-            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
-
-            <a href="#modal-box"
-              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <!--TRECI PRODUCT DODAN HTML-->
-      <div class="product-card">
-        <div class="product-image">
-          <img
-            src="images/rotor-sram-centerline-x-rotor-rounded-160-mm-with-bolts-32404-0-16620708074021-o.webp"
-            alt="Product Image"
-          />
-        </div>
-        <div class="product-info product-info-background">
-          <div class="product-title">SRAM ROTOR</div>
-          <div class="product-price">47.99 €</div>
-          <div class="product-description">
-            SRAM ROTOR SRAM ROTOR CENTERLINE 2 PIECE 160MM BLACK (INCLUDES STEEL
-            ROTOR BOLTS) ROUNDED
-          </div>
-          <div class="bottom-card">
-            <a href="">U Košaricu <i class="fas fa-shopping-cart"></i> </a>
-
-            <a href="#modal-box"
-              >Detalji proizvoda <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
+        <a href="#" class="modal-close">&times;</a>
       </div>
     </div>
 
@@ -308,7 +376,7 @@
       async function fetchHeaderAndFooter() {
         const header = await fetch("partials/header.html");
         const footer = await fetch("partials/footer.html");
-        const aside = await fetch("partials/aside.html");
+        const aside = await fetch("partials/aside-dijelovi.html");
 
         if (header.ok && footer.ok) {
           document.getElementById("header-container").innerHTML =

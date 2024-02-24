@@ -8,105 +8,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="headerAndFooter.script.js"></script>
   </head>
+  <style></style>
   <body>
-    <header>
-      <div class="top-row">
-        <div class="contact-info">
-          <div class="contact-group">
-            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-            <span class="contact-text"
-              ><a href="">info@outdoorbike-shop.hr</a></span
-            >
-          </div>
-          <div class="contact-group">
-            <span class="icon"><i class="fa-solid fa-phone"></i></span>
-            <span class="contact-text"><a href="">123-456-7890</a></span>
-          </div>
-        </div>
-        <div class="social-icons">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-        </div>
+    <div id="header-container"></div>
 
-        <!-------------------------------- SHOPING CARD MODAL ------------------------------------------->
-
-        <div id="card-modal" class="modal">
-          <div class="card-content">
-            <a href=""><span class="close-button">&times;</span></a>
-            <h2>Vaša Košarica</h2>
-            <div class="cart-items">
-              <div class="cart-item">
-                <img
-                  src="images/fuel-ex-8.webp"
-                  alt="Artikl"
-                  class="item-image"
-                />
-                <div class="item-details">
-                  <p class="item-name">Trek Fulex Exe 8.0</p>
-                  <p class="item-price">2100.00 €</p>
-                  <input type="number" value="1" class="item-quantity" />
-                </div>
-              </div>
-            </div>
-            <div class="cart-total">
-              <p>Ukupno: <span>2100.00 €</span></p>
-            </div>
-            <button class="checkout-button">Naplata</button>
-          </div>
-        </div>
-
-        <form action="" method="GET">
-          <div class="search-area">
-            <div class="search-bar">
-              <input type="text" placeholder="Search Something ..." />
-              <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="icon-container">
-              <div class="icon-with-text">
-                <a href="" class=""><i class="fas fa-user-plus"></i></a>
-                <span class="icon-text">Prijavi se</span>
-              </div>
-              <div class="icon-with-text">
-                <a href="#card-modal"
-                  ><i class="fas fa-shopping-cart"></i>
-                  <span class="cart-counter">3</span></a
-                >
-                <span class="icon-text">Košarica</span>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <!--OVO JE SEARCHBAR ZA MALE REZOLUCIJE, MOBITEL-->
-      <form action="" method="GET" id="mobile-search-form">
-        <div class="mobile-searchbar">
-          <input
-            type="text"
-            placeholder="Search Something ..."
-            class="bijeli-placeholder"
-          />
-          <button type="submit">
-            <i id="mobile-search-icon" class="fas fa-search"></i>
-          </button>
-        </div>
-      </form>
-
-      <div class="bottom-row">
-        <div class="logo">
-          <img src="images/logo14.png" alt="Logo" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="/partials/asideProduct.html">Bicikli</a></li>
-            <li><a href="#">Dijelovi</a></li>
-            <li><a href="#">Dodatna Oprema</a></li>
-            <li><a href="#">Akcija</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="footer-container"></div>
   </body>
 </html>
